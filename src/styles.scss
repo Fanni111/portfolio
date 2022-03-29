@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import './variables.scss';
+//TODO maybe no need downloadedd fonts
+
+/*@font-face {
+    font-family: "Manrope";
+    src: local("Manrope") url(assets/fonts/Manrope-Regular.ttf) format("truetype");
+}*/
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Manrope', san-serif;
+    color: $lightGray;
+    h1,
+    h2 {
+        color: $lightWhite;
+        font-weight: 100;
+    }
+}
+
+.base-side-padding {
+    padding: 0 10vw;
+}

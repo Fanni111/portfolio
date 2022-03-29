@@ -1,0 +1,63 @@
+@import "../../variables.scss";
+.my-work-section {
+    display: flex;
+    height: 10vw;
+    align-items: center;
+    background-size: cover;
+    background-image: url(../../assets/images/bg_grey.png);
+}
+
+.my-work-section h1 {
+    font-size: 3.4vw;
+}
+
+.work-desc-section {
+    display: flex;
+    align-items: center;
+}
+
+.img-wrapper {
+    display: flex;
+    max-width: 30vw;
+    display: flex;
+    // padding: 2vw 0;
+    flex-direction: column;
+    position: relative;
+    .img-front {
+        position: relative;
+        width: 100%;
+    }
+    .img-back {
+        position: absolute;
+        width: 100%;
+    }
+}
+
+mat-expansion-panel-header {
+    height: 100%;
+    width: 100%;
+}
+
+.project-item-container {
+    display: flex;
+    padding: 0 8vw;
+    &.thin-padding {
+        padding: 0 4vw;
+    }
+    .project-main-image-wrapper {
+        height: 30vw;
+        width: 60vw;
+        background: none;
+        box-shadow: none;
+    }
+    .project-main-title-wrapper {
+        height: 100%;
+        width: 60vw;
+        background: $lightWhite;
+        box-shadow: none;
+        .project-title {
+            color: $primaryColor;
+            height: 12vw; //set the default height of the project title when not expanded
+        }
+    }
+}
