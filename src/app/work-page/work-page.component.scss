@@ -1,63 +1,175 @@
-@import "../../variables.scss";
-.my-work-section {
-    display: flex;
-    height: 10vw;
-    align-items: center;
-    background-size: cover;
-    background-image: url(../../assets/images/bg_grey.png);
-}
-
-.my-work-section h1 {
-    font-size: 3.4vw;
-}
-
-.work-desc-section {
-    display: flex;
-    align-items: center;
-}
-
-.img-wrapper {
-    display: flex;
-    max-width: 30vw;
-    display: flex;
-    // padding: 2vw 0;
-    flex-direction: column;
-    position: relative;
-    .img-front {
-        position: relative;
-        width: 100%;
+    @import "../../variables.scss";
+    .my-work-section {
+        display: flex;
+        height: 10vw;
+        align-items: center;
+        background-size: cover;
+        background-image: url(../../assets/images/bg_grey.png);
     }
-    .img-back {
-        position: absolute;
-        width: 100%;
+    
+    .my-work-section h1 {
+        font-size: 3.4vw;
     }
-}
-
-mat-expansion-panel-header {
-    height: 100%;
-    width: 100%;
-}
-
-.project-item-container {
-    display: flex;
-    padding: 0 8vw;
-    &.thin-padding {
-        padding: 0 4vw;
+    
+    .work-desc-section {
+        display: flex;
+        align-items: center;
     }
-    .project-main-image-wrapper {
-        height: 30vw;
-        width: 60vw;
-        background: none;
-        box-shadow: none;
+    
+    .project-list {
+        // width: 100%;
+        padding: 0 10vw;
     }
-    .project-main-title-wrapper {
-        height: 100%;
-        width: 60vw;
-        background: $lightWhite;
-        box-shadow: none;
-        .project-title {
-            color: $primaryColor;
-            height: 12vw; //set the default height of the project title when not expanded
+    
+    .img-wrapper {
+        display: flex;
+        max-width: 100%; // 30vw;
+        display: flex;
+        // padding: 2vw 0;
+        //flex-direction: column;
+        //position: relative;
+        .img-front {
+            position: relative;
+            max-width: 100%;
+        }
+        .img-back {
+            position: absolute;
+            width: 100%;
         }
     }
-}
+    
+    .mat-expansion-panel {
+        background: $lightWhite;
+        //width: 40vw;
+        height: 100%;
+        box-shadow: none;
+    }
+    
+    .mat-expansion-panel-header {
+        // height: 12vw;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .mat-expansion-panel-header-title {
+        padding-left: 16px;
+    }
+    /*
+    
+     ::ng-deep .mat-expansion-panel-body {
+        background: white;
+    }*/
+    
+    .project-item-container {
+        display: flex;
+        /*&.thin-padding {
+            padding: 0 4vw;
+        }*/
+        .project-img-exp-panel {
+            height: 24vw;
+            width: 100%;
+            //padding: 0 16px;
+            display: flex;
+            flex-direction: column;
+            background: none;
+            box-shadow: none;
+            background-color: white;
+            flex-basis: 35%;
+            max-height: 24vw; // az expandolt content se lóghat túl 24vwn
+            .project-header-img-wrapper {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .project-desc-exp-panel {
+            //flex: 1; // egesz jobboldlat kitölti
+            flex-basis: 25%; //a meglevo jobboldali rélsznek csak a 25%tölti ki
+            margin-left: 1.5vw;
+            &.fixed-expanded-size {
+                max-height: 24vw;
+                min-height: 24vw;
+                flex: 1; // kitölteni az egesz szelesseget amit lehet
+                transition: all 1.5s;
+            }
+            //max-height: 24vw; // az expandolt content se lóghat túl 24vwn
+        }
+        .gradiental-border {
+            height: 100%;
+            //height: 12vw;
+            background: $lightWhite;
+            box-shadow: none;
+            // margin-left: 2vw;
+             :after {
+                content: '\A';
+                position: absolute;
+                background: linear-gradient(to top, $gradGreen 10%, $gradBlue 70%);
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 1vw;
+                height: 100%;
+                transition: all 1.5s;
+                border-right: none;
+            }
+             :hover:after {
+                width: 100%;
+            }
+        }
+        .project-main-title-wrapper {
+             :before {
+                content: ""; // white div szelen levo kis vonalak sarokba
+                top: 1vw;
+                right: 5%;
+                width: 6px;
+                height: 6px;
+                border-top: 2px solid black;
+                border-right: 2px solid black;
+                position: absolute;
+            }
+             :after {
+                content: ""; // white div szelen levo kis vonalak sarokba
+                bottom: 1vw;
+                right: 5%;
+                width: 6px;
+                height: 6px;
+                border-bottom: 2px solid black;
+                border-right: 2px solid black;
+                position: absolute;
+                background: none; // semlegesíteni a gradient hatasat
+                top: auto; // semlegesiti a gradiental border hatast ami afterre van
+                left: auto;
+            }
+             :hover:after {
+                width: auto; // semleg a grad-border width change-t
+            }
+        }
+        /*
+        &:hover {
+            background: linear-gradient(to top, $gradGreen 10%, $gradBlue 70%);
+            transition: 3s;
+        }*/
+        .project-title {
+            color: $primaryColor;
+            //height: 12vw; //set the default height of the project title when not expanded
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            height: 7vw;
+            padding-left: 2vw;
+            // padding-top: 5%;
+            .work-item-category {
+                font-size: 1vw;
+                margin-bottom: 0.2vw;
+                z-index: 10;
+            }
+            .work-item-title {
+                font-size: 1.5vw;
+                z-index: 10;
+            }
+        }
+    }
+    
+    .expanded-content {
+        color: $primaryColor;
+    }

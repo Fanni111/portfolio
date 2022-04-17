@@ -1,45 +1,55 @@
 <div class="my-work-section base-side-padding">
     <h1>Munkáim</h1>
 </div>
-<div class="project-item-container" [class.thin-padding]="this.panelOpenState">
+<div>
+    <div></div>
+    <div></div>
+</div>
+<div class="project-list">
+    <div class="project-item-container" [class.thin-padding]="this.panelOpenState">
 
-    <!-- <mat-accordion> -->
-    <mat-expansion-panel class="project-main-image-wrapper" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                <div class="img-wrapper">
-
+        <!-- <mat-accordion> -->
+        <mat-expansion-panel class="project-img-exp-panel" (opened)="panelOpenState = false" (closed)="panelOpenState = true">
+            <mat-expansion-panel-header class="project-header-img-wrapper">
+                <mat-panel-title>
+                    <div class="img-wrapper">
+                        <img class="img-front" src="assets/images/eskuvokorzo_mockup.png" />
+                        <!-- 
                     <img class="img-front" src="assets/images/Vector_11.png" />
                     <img class="img-back" src="/assets/images/neptanc.png" />
-                    <img class="img-back" src="assets/images/Vector_10.png" />
-                </div>
-            </mat-panel-title>
-            <!-- <mat-panel-description>
+                    <img class="img-back" src="assets/images/Vector_10.png" /> -->
+                    </div>
+                </mat-panel-title>
+                <!-- <mat-panel-description>
                 NEPTANC Currently I am {{panelOpenState ? 'open' : 'closed'}}
             </mat-panel-description> -->
-        </mat-expansion-panel-header>
+            </mat-expansion-panel-header>
 
-        <p class="skills-desc">A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.</p>
+            <p class="skills-desc">A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.</p>
 
-        <p>I'm visible because I am open</p>
+            <p>I'm visible because I am open</p>
 
-    </mat-expansion-panel>
-    <!-- </mat-accordion> -->
+        </mat-expansion-panel>
+        <!-- </mat-accordion> -->
 
-    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" class="project-main-title-wrapper">
-        <mat-expansion-panel-header>
-            <mat-panel-title class="project-title">
-                Self aware panel
-            </mat-panel-title>
-            <!-- <mat-panel-description>
+        <mat-expansion-panel class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header class="gradiental-border">
+                <mat-panel-title class="project-main-title-wrapper project-title">
+                    <div class="work-item-category">Weboldal tervezés</div>
+                    <div class="work-item-title">Velencei Esküvőkorzó</div>
+                </mat-panel-title>
+                <!-- <mat-panel-description>
                 NEPTANC Currently I am {{panelOpenState ? 'open' : 'closed'}}
             </mat-panel-description> -->
-        </mat-expansion-panel-header>
+            </mat-expansion-panel-header>
 
-        <p class="skills-desc">A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.</p>
+            <div class="expanded-content">
+                <p class="skills-desc">A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.</p>
 
-        <p>I'm visible because I am open</p>
+                <p>I'm visible because I am open</p>
+            </div>
 
-    </mat-expansion-panel>
+        </mat-expansion-panel>
 
+    </div>
 </div>
