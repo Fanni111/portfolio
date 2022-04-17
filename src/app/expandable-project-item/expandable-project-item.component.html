@@ -1,0 +1,27 @@
+<div class="project-list">
+    <div class="project-item-container" [class.thin-padding]="this.panelOpenState">
+
+        <div class="project-img-exp-panel gradient-border" [class.expanded-size]="panelOpenState" (click)="changePanelState()" (opened)="panelOpenState = false" (closed)="panelOpenState = true">
+            <div class="project-header-img-wrapper">
+                <img class="img-front" [src]=projectItem.imgSrc />
+                <!-- <img class="img-front" src="assets/images/scr_eskuvokorzo.jpg" /> -->
+            </div>
+        </div>
+
+        <div class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <div class="gradiental-border" (click)="changePanelState()">
+                <div class="project-main-title-wrapper project-title" [class.expanded-content]="panelOpenState">
+                    <div class="work-item-category">{{projectItem?.category}}</div>
+                    <div class="work-item-title">{{projectItem.title}}</div>
+                </div>
+            </div>
+
+            <div class="expanded-content" [class.expandedState]="panelOpenState">
+                <p class="project-item-desc">
+                    {{projectItem.desc}}
+            </div>
+
+        </div>
+
+    </div>
+</div>

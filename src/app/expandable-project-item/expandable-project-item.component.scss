@@ -1,0 +1,194 @@
+@import "../../variables.scss";
+.my-work-section {
+    display: flex;
+    height: 10vw;
+    align-items: center;
+    background-size: cover;
+    background-image: url(../../assets/images/bg_grey.png);
+}
+
+.my-work-section h1 {
+    font-size: 3.4vw;
+}
+
+.work-desc-section {
+    display: flex;
+    align-items: center;
+}
+
+.work-intro-wrapper {
+    height: 12vw;
+    ;
+}
+
+.project-list {
+    padding: 0 10vw;
+}
+
+.project-item-container {
+    display: flex;
+    height: 24vw;
+    z-index: 1;
+    position: relative;
+    .project-img-exp-panel {
+        width: 100%;
+        max-height: 100%;
+        display: flex;
+        background-color: $lightWhite; //white;
+        flex-basis: 35%;
+        justify-content: center;
+        padding: 0 2vw;
+        transition: all 1.5s;
+        &.expanded-size {
+            flex-basis: 75%;
+            padding: 2vw 2vw;
+        }
+        .project-header-img-wrapper {
+            align-self: center;
+            img {
+                width: 100%;
+            }
+        }
+        &.gradient-border {
+            --borderWidth: 3px;
+            background: $darkGray; // #1D1F20;
+            position: relative;
+            // border-radius: var(--borderWidth);
+             :after {
+                content: '';
+                position: absolute;
+                top: calc(-1 * var(--borderWidth));
+                left: calc(-1 * var(--borderWidth));
+                height: calc(100% + var(--borderWidth) * 2);
+                width: calc(100% + var(--borderWidth) * 2);
+                // background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+                background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+                // border-radius: calc(2 * var(--borderWidth));
+                z-index: -1;
+                animation: animatedgradient 3s ease alternate infinite;
+                background-size: 300% 300%;
+                box-shadow: -3px 3px 15px #000;
+            }
+            @keyframes animatedgradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        }
+    }
+    .project-desc-exp-panel {
+        //flex: 1; // egesz jobboldlat kitölti
+        flex-basis: 25%; //a meglevo jobboldali rélsznek csak a 25%tölti ki
+        margin-left: 1.5vw;
+        flex-direction: column;
+        display: flex;
+        padding-top: 5%;
+        transition: all 1.5s;
+        &.fixed-expanded-size {
+            padding-top: 0;
+        }
+    }
+    .gradiental-border {
+        display: flex;
+         :after {
+            content: '\A';
+            position: absolute;
+            background: linear-gradient(to top, $gradGreen 10%, $gradBlue 70%);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 1vw;
+            height: 100%;
+            transition: all 1.5s;
+            border-right: none;
+        }
+         :hover:after {
+            width: 100%;
+        }
+    }
+    .project-main-title-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        height: 100%;
+        //height: 12vw;
+        background: $lightWhite;
+        box-shadow: none;
+        color: $primaryColor;
+        // margin-left: 2vw;
+         :before {
+            content: ""; // white div szelen levo kis vonalak sarokba
+            top: 1vw;
+            right: 5%;
+            width: 6px;
+            height: 6px;
+            border-top: 2px solid black;
+            border-right: 2px solid black;
+            position: absolute;
+        }
+         :after {
+            content: ""; // white div szelen levo kis vonalak sarokba
+            bottom: 1vw;
+            right: 5%;
+            width: 6px;
+            height: 6px;
+            border-bottom: 2px solid black;
+            border-right: 2px solid black;
+            position: absolute;
+            background: none; // semlegesíteni a gradient hatasat
+            top: auto; // semlegesiti a gradiental border hatast ami afterre van
+            left: auto;
+        }
+         :hover:after {
+            width: auto; // semleg a grad-border width change-t
+        }
+    }
+    /*
+&:hover {
+background: linear-gradient(to top, $gradGreen 10%, $gradBlue 70%);
+transition: 3s;
+}*/
+    .project-title {
+        color: $primaryColor;
+        //height: 12vw; //set the default height of the project title when not expanded
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 7vw;
+        padding-left: 2vw;
+        box-shadow: -5px 5px 25px #000;
+        &.expanded-content {
+            //box-shadow: none;
+        }
+        // padding-top: 5%;
+        .work-item-category {
+            font-size: 1vw;
+            margin-bottom: 0.2vw;
+            z-index: 10;
+        }
+        .work-item-title {
+            font-size: 1.5vw;
+            z-index: 10;
+        }
+    }
+}
+
+.expanded-content {
+    color: $primaryColor;
+    background: $lightWhite;
+    padding: 0 2vw;
+    height: 0%;
+    transition: all 2s;
+    &.expandedState {
+        height: 100%;
+        overflow: scroll;
+        box-shadow: -5px 5px 25px #000;
+    }
+}

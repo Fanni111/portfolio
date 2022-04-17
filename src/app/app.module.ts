@@ -15,6 +15,7 @@ import { TopMenuComponent } from './sections/top-menu/top-menu.component';
 import { FooterComponent } from './sections/footer/footer.component';
 import { WorkPageComponent } from './work-page/work-page.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { ExpandableProjectItemComponent } from './expandable-project-item/expandable-project-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     HomeComponent,
     TopMenuComponent,
     FooterComponent,
-    WorkPageComponent
+    WorkPageComponent,
+    ExpandableProjectItemComponent
   ],
   imports: [
     BrowserModule,
