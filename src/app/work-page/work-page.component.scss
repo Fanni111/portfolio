@@ -37,11 +37,11 @@
                     background-color: $lightWhite; //white;
                     flex-basis: 35%;
                     justify-content: center;
-                    padding: 0 3vw;
+                    padding: 0 2vw;
                     transition: all 1.5s;
                     &.expanded-size {
                         flex-basis: 75%;
-                        padding: 2vw 3vw;
+                        padding: 2vw 2vw;
                     }
                     .project-header-img-wrapper {
                         align-self: center;
@@ -67,6 +67,7 @@
                             z-index: -1;
                             animation: animatedgradient 3s ease alternate infinite;
                             background-size: 300% 300%;
+                            box-shadow: -3px 3px 15px #000;
                         }
                         @keyframes animatedgradient {
                             0% {
@@ -87,6 +88,11 @@
                     margin-left: 1.5vw;
                     flex-direction: column;
                     display: flex;
+                    padding-top: 5%;
+                    transition: all 1.5s;
+                    &.fixed-expanded-size {
+                        padding-top: 0;
+                    }
                 }
                 .gradiental-border {
                     display: flex;
@@ -159,7 +165,7 @@
                     padding-left: 2vw;
                     box-shadow: -5px 5px 25px #000;
                     &.expanded-content {
-                        box-shadow: none;
+                        //box-shadow: none;
                     }
                     // padding-top: 5%;
                     .work-item-category {

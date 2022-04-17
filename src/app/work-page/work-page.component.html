@@ -7,15 +7,12 @@
 <div class="project-list">
     <div class="project-item-container" [class.thin-padding]="this.panelOpenState">
 
-        <!-- <mat-accordion> -->
         <div class="project-img-exp-panel gradient-border" [class.expanded-size]="panelOpenState" (click)="changePanelState()" (opened)="panelOpenState = false" (closed)="panelOpenState = true">
             <div class="project-header-img-wrapper">
-                <!-- <img class="img-front" src="assets/images/eskuvokorzo_mockup.png" /> -->
-                <img class="img-front" src="assets/images/scr_eskuvokorzo.jpg" />
+                <img class="img-front" src="assets/images/eskuvokorzo_mockup.png" />
+                <!-- <img class="img-front" src="assets/images/scr_eskuvokorzo.jpg" /> -->
             </div>
-
         </div>
-        <!-- </mat-accordion> -->
 
         <div class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
             <div class="gradiental-border" (click)="changePanelState()">
@@ -26,7 +23,8 @@
             </div>
 
             <div class="expanded-content" [class.expandedState]="panelOpenState">
-                <p class="project-item-desc">A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.</p>
+                <p class="project-item-desc">
+                    A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.</p>
             </div>
 
         </div>
