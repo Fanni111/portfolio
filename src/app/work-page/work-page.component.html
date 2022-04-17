@@ -1,55 +1,35 @@
 <div class="my-work-section base-side-padding">
     <h1>Munkáim</h1>
 </div>
-<div>
-    <div></div>
-    <div></div>
+<div class="work-intro-wrapper base-side-padding">
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, dolor? Necessitatibus soluta sapiente repellendus veniam adipisci molestias fuga, ut odio odit quo, placeat nesciunt eaque? Voluptatem, laudantium. Odit, quidem itaque.</div>
 </div>
 <div class="project-list">
     <div class="project-item-container" [class.thin-padding]="this.panelOpenState">
 
         <!-- <mat-accordion> -->
-        <mat-expansion-panel class="project-img-exp-panel" (opened)="panelOpenState = false" (closed)="panelOpenState = true">
-            <mat-expansion-panel-header class="project-header-img-wrapper">
-                <mat-panel-title>
-                    <div class="img-wrapper">
-                        <img class="img-front" src="assets/images/eskuvokorzo_mockup.png" />
-                        <!-- 
-                    <img class="img-front" src="assets/images/Vector_11.png" />
-                    <img class="img-back" src="/assets/images/neptanc.png" />
-                    <img class="img-back" src="assets/images/Vector_10.png" /> -->
-                    </div>
-                </mat-panel-title>
-                <!-- <mat-panel-description>
-                NEPTANC Currently I am {{panelOpenState ? 'open' : 'closed'}}
-            </mat-panel-description> -->
-            </mat-expansion-panel-header>
-
-            <p class="skills-desc">A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.</p>
-
-            <p>I'm visible because I am open</p>
-
-        </mat-expansion-panel>
-        <!-- </mat-accordion> -->
-
-        <mat-expansion-panel class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-            <mat-expansion-panel-header class="gradiental-border">
-                <mat-panel-title class="project-main-title-wrapper project-title">
-                    <div class="work-item-category">Weboldal tervezés</div>
-                    <div class="work-item-title">Velencei Esküvőkorzó</div>
-                </mat-panel-title>
-                <!-- <mat-panel-description>
-                NEPTANC Currently I am {{panelOpenState ? 'open' : 'closed'}}
-            </mat-panel-description> -->
-            </mat-expansion-panel-header>
-
-            <div class="expanded-content">
-                <p class="skills-desc">A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.</p>
-
-                <p>I'm visible because I am open</p>
+        <div class="project-img-exp-panel gradient-border" [class.expanded-size]="panelOpenState" (click)="changePanelState()" (opened)="panelOpenState = false" (closed)="panelOpenState = true">
+            <div class="project-header-img-wrapper">
+                <!-- <img class="img-front" src="assets/images/eskuvokorzo_mockup.png" /> -->
+                <img class="img-front" src="assets/images/scr_eskuvokorzo.jpg" />
             </div>
 
-        </mat-expansion-panel>
+        </div>
+        <!-- </mat-accordion> -->
+
+        <div class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <div class="gradiental-border" (click)="changePanelState()">
+                <div class="project-main-title-wrapper project-title" [class.expanded-content]="panelOpenState">
+                    <div class="work-item-category">Weboldal tervezés</div>
+                    <div class="work-item-title">Velencei Esküvőkorzó</div>
+                </div>
+            </div>
+
+            <div class="expanded-content" [class.expandedState]="panelOpenState">
+                <p class="project-item-desc">A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.</p>
+            </div>
+
+        </div>
 
     </div>
 </div>

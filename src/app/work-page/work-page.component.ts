@@ -14,4 +14,8 @@ export class WorkPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changePanelState(){
+    this.panelOpenState = !this.panelOpenState;
+  }
+
 }
