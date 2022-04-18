@@ -10,9 +10,11 @@ export class WorkPageComponent implements OnInit {
 
   panelOpenState = false;
   eskuvoKorzo: ProjectItem;
+  keleszto: ProjectItem;
 
   constructor() { 
     this.eskuvoKorzo = new ProjectItem("assets/images/eskuvokorzo_mockup.png","Velencei Esküvőkorzó", "Webdesign","A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.");
+    this.keleszto = new ProjectItem("assets/images/eskuvokorzo_mockup.png","Velencei Esküvőkorzó", "Webdesign","A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.");
   }
 
   ngOnInit(): void {

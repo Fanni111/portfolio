@@ -10,6 +10,8 @@ export class ExpandableProjectItemComponent implements OnInit {
 
   panelOpenState = false;
   @Input('projectItem') projectItem: ProjectItem;
+  @Input() topPadding: number;
+  @Input() isLeftAligned: boolean;
 
   constructor() { }
 

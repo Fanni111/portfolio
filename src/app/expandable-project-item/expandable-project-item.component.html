@@ -1,14 +1,17 @@
 <div class="project-list">
-    <div class="project-item-container" [class.thin-padding]="this.panelOpenState">
 
-        <div class="project-img-exp-panel gradient-border" [class.expanded-size]="panelOpenState" (click)="changePanelState()" (opened)="panelOpenState = false" (closed)="panelOpenState = true">
+    <ng-template #expandableImgComp>
+        <div class="project-img-exp-panel gradient-border" [class.expanded-size]="panelOpenState" (click)="changePanelState()">
             <div class="project-header-img-wrapper">
                 <img class="img-front" [src]=projectItem.imgSrc />
                 <!-- <img class="img-front" src="assets/images/scr_eskuvokorzo.jpg" /> -->
             </div>
         </div>
+    </ng-template>
 
-        <div class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <ng-template #expandableDescComp>
+
+        <div class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState">
             <div class="gradiental-border" (click)="changePanelState()">
                 <div class="project-main-title-wrapper project-title" [class.expanded-content]="panelOpenState">
                     <div class="work-item-category">{{projectItem?.category}}</div>
@@ -17,11 +20,25 @@
             </div>
 
             <div class="expanded-content" [class.expandedState]="panelOpenState">
-                <p class="project-item-desc">
-                    {{projectItem.desc}}
+                <p *ngIf="panelOpenState" class="project-item-desc"> {{projectItem.desc}}
             </div>
-
         </div>
+    </ng-template>
+
+
+    <div class="project-item-container" [class.left-aligned-content]="isLeftAligned">
+
+        <ng-container *ngIf="isLeftAligned; else rightAligned">
+
+            <ng-container *ngTemplateOutlet="expandableImgComp"></ng-container>
+            <ng-container *ngTemplateOutlet="expandableDescComp"></ng-container>
+
+        </ng-container>
+
+        <ng-template #rightAligned>
+
+            <ng-container *ngTemplateOutlet="expandableDescComp"></ng-container>
+            <ng-container *ngTemplateOutlet="expandableImgComp"></ng-container>
+        </ng-template>
 
     </div>
-</div>
