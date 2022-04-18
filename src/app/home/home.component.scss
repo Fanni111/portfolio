@@ -197,39 +197,6 @@ h2 {
     padding: 3vw 10vw;
 }
 
-.work-container {
-    display: flex;
-    width: 100%;
-}
-
-.work-category-wrapper {
-    display: flex;
-    padding: 2vw 0;
-    flex-direction: column;
-    position: relative;
-}
-
-.frame-media-design-back {
-    max-width: 80%;
-    position: relative;
-}
-
-.frame-media-design-front {
-    max-width: 80%;
-    position: absolute;
-    margin-top: 1vh;
-}
-
-.category-img {
-    max-width: 70%;
-    margin-top: 2vh;
-    position: absolute;
-}
-
-.work-category-title {
-    padding-left: 4vw;
-}
-
 .contact-container {
     color: $lightGray;
     display: flex;

@@ -16,6 +16,7 @@ import { FooterComponent } from './sections/footer/footer.component';
 import { WorkPageComponent } from './work-page/work-page.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ExpandableProjectItemComponent } from './expandable-project-item/expandable-project-item.component';
+import { WorkCategoryOverviewComponent } from './sections/work-category-overview/work-category-overview.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ExpandableProjectItemComponent } from './expandable-project-item/expand
     TopMenuComponent,
     FooterComponent,
     WorkPageComponent,
-    ExpandableProjectItemComponent
+    ExpandableProjectItemComponent,
+    WorkCategoryOverviewComponent
   ],
   imports: [
     BrowserModule,
