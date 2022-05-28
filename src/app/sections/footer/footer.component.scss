@@ -1,0 +1,25 @@
+@import '../../../variables.scss';
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $lightGray;
+}
+
+.social-icon-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.social-footer-icon {
+    padding-right: 2vw;
+}
+
+.social-footer-icon a {
+    color: $lightGray;
+}
+
+.social-footer-icon .fa:hover {
+    color: $lightWhite;
+    transition: color 0.3s ease-in;
+}

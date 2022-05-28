@@ -24,3 +24,11 @@ mat-toolbar {
         border-radius: 0px;
     }
 }
+
+::ng-deep .mat-menu-panel {
+    min-width: 100% !important;
+}
+
+::ng-deep .cdk-overlay-pane {
+    min-width: 100% !important;
+}

@@ -27,7 +27,7 @@ export class TopMenuComponent implements OnInit {
     },
     {
       label: 'Kapcsolat',
-      link: 'attach_money'
+      link: '/magamrol#contact-anchor'
     }
   ];
 
