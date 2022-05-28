@@ -17,6 +17,8 @@ import { WorkPageComponent } from './work-page/work-page.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ExpandableProjectItemComponent } from './expandable-project-item/expandable-project-item.component';
 import { WorkCategoryOverviewComponent } from './sections/work-category-overview/work-category-overview.component';
+import { FloatingMenuComponent } from './work-page/floating-menu/floating-menu/floating-menu.component';
+import { FloatingBtnComponent } from './work-page/floating-menu/floating-btn/floating-btn.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { WorkCategoryOverviewComponent } from './sections/work-category-overview
     FooterComponent,
     WorkPageComponent,
     ExpandableProjectItemComponent,
-    WorkCategoryOverviewComponent
+    WorkCategoryOverviewComponent,
+    FloatingMenuComponent,
+    FloatingBtnComponent
   ],
   imports: [
     BrowserModule,
