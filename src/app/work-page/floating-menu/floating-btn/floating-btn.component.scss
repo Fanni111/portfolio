@@ -2,20 +2,15 @@
 .floating-btn {
     width: 6vw;
     height: 6vw;
-    border: 10px solid;
+    // border: 10px solid;
     border-image-slice: 1;
     border-width: 3px;
     //border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
     background-color: $darkGray;
-     :hover {
-        background-color: $primaryColor;
-        cursor: pointer;
-        padding: 0;
-    }
     .btn-img {
         width: 60%;
          :hover {
-            width: 80%; // TODO: better resize
+            // width: 80%; // TODO: better resize
         }
     }
 }

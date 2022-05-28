@@ -23,7 +23,7 @@ export class FloatingMenuComponent implements OnInit {
       new ProjectCategory("assets/images/motion_design_arrow.png",
       "Motion design", "linear-gradient(to left, #00FFA9, #3EA6DB)"),
       new ProjectCategory("assets/images/icon_webdesign.png",
-      "Web design", "linear-gradient(to left, #3EA6DB,#CD4AB6)"),
+      "Web design", "linear-gradient(to left, #CD4AB6, #00FFA9)"),
     ];
 
   }
