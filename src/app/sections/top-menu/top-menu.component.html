@@ -9,10 +9,14 @@
         <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #dropMenu="matMenu" backdropClass="dropdownMenu">
+
         <ng-container *ngFor="let item of menuItems">
-            <button mat-menu-item>
+            <a [href]="item.link">
+                <button mat-menu-item>
                 {{item.label}}
             </button>
+            </a>
+
             <mat-divider></mat-divider>
         </ng-container>
     </mat-menu>
