@@ -3,8 +3,8 @@
     <ng-template #expandableImgComp>
         <div class="project-img-exp-panel gradient-border" [class.expanded-size]="panelOpenState" (click)="changePanelState()">
             <div class="project-header-img-wrapper">
-                <img class="img-front" [src]=projectItem.imgSrc />
-                <!-- <img class="img-front" src="assets/images/scr_eskuvokorzo.jpg" /> -->
+                <!-- <img class="img-front" [src]=projectItem.imgSrc /> -->
+                <image-slider></image-slider>
             </div>
         </div>
     </ng-template>

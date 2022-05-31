@@ -19,6 +19,8 @@ import { ExpandableProjectItemComponent } from './expandable-project-item/expand
 import { WorkCategoryOverviewComponent } from './sections/work-category-overview/work-category-overview.component';
 import { FloatingMenuComponent } from './work-page/floating-menu/floating-menu/floating-menu.component';
 import { FloatingBtnComponent } from './work-page/floating-menu/floating-btn/floating-btn.component';
+import { ImageSliderComponent } from './work-page/image-slider/image-slider.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { FloatingBtnComponent } from './work-page/floating-menu/floating-btn/flo
     ExpandableProjectItemComponent,
     WorkCategoryOverviewComponent,
     FloatingMenuComponent,
-    FloatingBtnComponent
+    FloatingBtnComponent,
+    ImageSliderComponent
   ],
   imports: [
     BrowserModule,
@@ -43,16 +46,18 @@ import { FloatingBtnComponent } from './work-page/floating-menu/floating-btn/flo
     MatMenuModule,
     MatDividerModule,
     FlexLayoutModule,
-    MatExpansionModule
+    MatExpansionModule,
+    NgbModule
   ],
   exports:[
     MatSidenavModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
+    ImageSliderComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, ImageSliderComponent]
 })
 export class AppModule { 
 
