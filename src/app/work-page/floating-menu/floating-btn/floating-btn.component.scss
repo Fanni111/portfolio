@@ -7,6 +7,9 @@
     border-width: 3px;
     //border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
     background-color: $darkGray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .btn-img {
         width: 60%;
          :hover {
@@ -17,6 +20,7 @@
 
 .tooltip {
     position: relative;
+    opacity: 1;
 }
 
 .tooltip:before {
