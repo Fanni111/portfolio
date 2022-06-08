@@ -13,7 +13,7 @@ export class FloatingBtnComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("ds" + this.categoryItem.icon);
+    console.log("ds" + this.categoryItem.anchorLink);
   }
 
 }

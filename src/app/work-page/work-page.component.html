@@ -2,37 +2,10 @@
     <h1>Munkáim</h1>
 </div>
 
-<!-- <div class="work-intro-wrapper base-side-padding">
-    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, dolor? Necessitatibus soluta sapiente repellendus veniam adipisci molestias fuga, ut odio odit quo, placeat nesciunt eaque? Voluptatem, laudantium. Odit, quidem itaque.</div>
-</div> -->
-
 <floating-menu></floating-menu>
-<expandable-project-item [projectItem]="eskuvoKorzo" [isLeftAligned]="true" [topPadding]="5"></expandable-project-item>
-<expandable-project-item [projectItem]="keleszto" [isLeftAligned]="false" [topPadding]="15"></expandable-project-item>
-<!-- <div class="project-list">
-    <div class="project-item-container" [class.thin-padding]="this.panelOpenState">
 
-        <div class="project-img-exp-panel gradient-border" [class.expanded-size]="panelOpenState" (click)="changePanelState()" (opened)="panelOpenState = false" (closed)="panelOpenState = true">
-            <div class="project-header-img-wrapper">
-                <img class="img-front" src="assets/images/eskuvokorzo_mockup.png" />
-                <!-<img class="img-front" src="assets/images/scr_eskuvokorzo.jpg" /> ->
-</div>
-</div>
+<expandable-project-item id="neptanc-anchor" [projectItem]="neptanc" [isLeftAligned]="true" [topPadding]="5"></expandable-project-item>
+<expandable-project-item id="kripto-anchor" [projectItem]="kripto" [isLeftAligned]="false" [topPadding]="5"></expandable-project-item>
 
-<div class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-    <div class="gradiental-border" (click)="changePanelState()">
-        <div class="project-main-title-wrapper project-title" [class.expanded-content]="panelOpenState">
-            <div class="work-item-category">Weboldal tervezés</div>
-            <div class="work-item-title">Velencei Esküvőkorzó</div>
-        </div>
-    </div>
-
-    <div class="expanded-content" [class.expandedState]="panelOpenState">
-        <p class="project-item-desc">
-            A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.</p>
-    </div>
-
-</div>
-
-</div>
-</div> -->
+<expandable-project-item id="eskuvokorzo-anchor" [projectItem]="eskuvoKorzo" [isLeftAligned]="true" [topPadding]="5"></expandable-project-item>
+<expandable-project-item id="keleszto-anchor" [projectItem]="keleszto" [isLeftAligned]="false" [topPadding]="15"></expandable-project-item>

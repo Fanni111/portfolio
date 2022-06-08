@@ -19,11 +19,12 @@ export class ProjectItem {
     icon: string;
     title: string;
     color: string;
+    anchorLink: string;
 
-    constructor( icon:string,title:string, color:string){
+    constructor( icon:string,title:string, color:string, anchorLink: string){
         this.icon = icon;
         this.title = title;
         this.color = color;
-        ;
+        this.anchorLink = anchorLink;
     }
   }
