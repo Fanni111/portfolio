@@ -4,13 +4,14 @@ export class ProjectItem {
     title:string;
     category:string; // TODO: make it Category class
     desc:string;
+    images: string[];
 
-    constructor( imgSrc:string,title:string, category:string, desc:string){
+    constructor( imgSrc:string,title:string, category:string, desc:string, images: string[]){
             this.imgSrc = imgSrc;
             this.title = title;
             this.category = category;
-            this.desc = desc
-            ;
+            this.desc = desc;
+            this.images = images;
         }
   }
 

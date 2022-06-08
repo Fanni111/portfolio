@@ -1,9 +1,40 @@
 ngb-carousel {
-    // width: 50vw;
-    // height: 50vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
 
 .slider-img {
     width: 100%;
+    height: 100%;
+    object-fit: contain; //IMPORTANT: this make images NOT TO DISTORT
+}
+
+::ng-deep .carousel-inner {
+    display: flex;
+    height: 100%;
+    //align-items: center; //elrontja a expanded stat todo
+}
+
+::ng-deep .carousel-item {
+    height: 100%;
+}
+
+::ng-deep .carousel-indicators {
+    margin-bottom: - 1.5rem;
+}
+
+.slider-img-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    &.expanded-state {
+        height: 100%;
+        align-items: normal;
+    }
+}
+
+.picsum-img-wrapper {
     height: 100%;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgbCarouselConfig, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 import { ViewChild } from '@angular/core';
 import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
@@ -12,8 +12,7 @@ import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 //perspective slider: https://codepen.io/alexnoz/pen/brazWd 
 export class ImageSliderComponent implements OnInit {
 
-  images = [62, 83].map((n) => `https://picsum.photos/id/${n}/900/500`);
-  // images = [62, 83, 466, 965, 982, 1043, 738].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  //images = ["assets/images/webdesign/eskuvokorzo_mockup.png", "assets/images/webdesign/eskuvokorzo_nagy_plakat.png"];
 
   paused = false;
   unpauseOnArrow = false;
@@ -22,6 +21,10 @@ export class ImageSliderComponent implements OnInit {
   pauseOnFocus = true;
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
+  @Input('isExpanded') isExpanded: boolean;
+
+  @Input('images') images: string[];
+
 
   togglePaused() {
     if (this.paused) {
