@@ -1,5 +1,5 @@
 <mat-toolbar fxLayout="row" color="primary" fxLayoutAlign="end center">
-    <a *ngFor="let item of menuItems" [href]="item.link">
+    <a *ngFor="let item of menuItems" [routerLink]="item.link">
         <button mat-button fxHide.xs>
         {{item.label}}
     </button>

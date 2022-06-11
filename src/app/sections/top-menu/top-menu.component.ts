@@ -35,6 +35,12 @@ export class TopMenuComponent implements OnInit {
       label: '/mag',
       link: '/magamrol'
     },
+    
+    
+    {
+      label: 'hh',
+      link: '/#/munkaim'
+    },
     {
       label: 'Kapcsolat',
       link: '#contact-anchor'
