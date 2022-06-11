@@ -8,6 +8,10 @@ const routes: Routes = [
   { path: 'magamrol', component: HomeComponent},
   { path: '', redirectTo: '/magamrol', pathMatch: 'full' },
   { path: 'munkaim', component: WorkPageComponent},
+  { path: '', redirectTo: '/munkaim', pathMatch: 'full' },
+  { path: 'kapcsolat', component: HomeComponent},
+  { path: '', redirectTo: 'magamrol', pathMatch: 'full' },
+
 ];
 @NgModule({
   imports: [
