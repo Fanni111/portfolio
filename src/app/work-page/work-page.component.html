@@ -1,11 +1,18 @@
-<div class="my-work-section base-side-padding">
-    <h1>Munkáim</h1>
+<div class="work-page">
+
+    <div class="my-work-section base-side-padding">
+        <h1>Munkáim</h1>
+    </div>
+
+    <floating-menu fxHide.xs></floating-menu>
+    <div class="project-list">
+
+        <expandable-project-item id="neptanc-anchor" [projectItem]="neptanc" [isLeftAligned]="true" [topPadding]="5"></expandable-project-item>
+        <expandable-project-item id="kripto-anchor" [projectItem]="kripto" [isLeftAligned]="false" [topPadding]="5"></expandable-project-item>
+
+        <expandable-project-item id="eskuvokorzo-anchor" [projectItem]="eskuvoKorzo" [isLeftAligned]="true" [topPadding]="5"></expandable-project-item>
+        <expandable-project-item id="keleszto-anchor" [projectItem]="keleszto" [isLeftAligned]="false" [topPadding]="15"></expandable-project-item>
+    </div>
+    <footer></footer>
+
 </div>
-
-<floating-menu fxHide.xs></floating-menu>
-
-<expandable-project-item id="neptanc-anchor" [projectItem]="neptanc" [isLeftAligned]="true" [topPadding]="5"></expandable-project-item>
-<expandable-project-item id="kripto-anchor" [projectItem]="kripto" [isLeftAligned]="false" [topPadding]="5"></expandable-project-item>
-
-<expandable-project-item id="eskuvokorzo-anchor" [projectItem]="eskuvoKorzo" [isLeftAligned]="true" [topPadding]="5"></expandable-project-item>
-<expandable-project-item id="keleszto-anchor" [projectItem]="keleszto" [isLeftAligned]="false" [topPadding]="15"></expandable-project-item>

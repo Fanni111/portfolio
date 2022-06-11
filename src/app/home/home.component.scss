@@ -1,6 +1,10 @@
 @import '../../variables.scss';
 .homepage {
     background-color: $primaryColor;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .topnav {
@@ -116,6 +120,7 @@ h2 {
 .skills-desc {
     font-size: 1.5vw;
     line-height: 150%;
+    margin-bottom: 0;
 }
 
 .email-link {
@@ -213,6 +218,7 @@ h2 {
     color: $lightGray;
     display: flex;
     flex-direction: column;
+    margin-bottom: 2vh;
 }
 
 .footer-separator {
