@@ -8,11 +8,11 @@ const routes: Routes = [
   { path: 'magamrol', component: HomeComponent},
   { path: '', redirectTo: '/magamrol', pathMatch: 'full' },
   { path: 'munkaim', component: WorkPageComponent},
-  //{ path: '', redirectTo: '/munkaim', pathMatch: 'full' },
+  /*{ path: '', redirectTo: '/munkaim', pathMatch: 'full' },
   { path: 'kapcsolat', component: WorkPageComponent},
   { path: '/kap', component: WorkPageComponent},
   { path: '/munkaim', component: WorkPageComponent},
-  { path: '#/munkaim', component: WorkPageComponent},
+  { path: '#/munkaim', component: WorkPageComponent},*/
 
 ];
 @NgModule({
