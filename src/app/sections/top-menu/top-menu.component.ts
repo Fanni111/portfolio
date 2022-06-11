@@ -19,7 +19,7 @@ export class TopMenuComponent implements OnInit {
   menuItems: MenuItem[] = [
     {
       label: 'Magamról',
-      link: 'magamrol'
+      link: 'portfolio/magamrol'
     },
     {
       label: 'Munkáim',
@@ -27,7 +27,7 @@ export class TopMenuComponent implements OnInit {
     },
     {
       label: 'Kapcsolat',
-      link: 'magamrol#contact-anchor'
+      link: '#contact-anchor'
     }
   ];
 
