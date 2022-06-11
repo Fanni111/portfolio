@@ -5,7 +5,7 @@ import { HomeComponent } from '../home/home.component';
 import { WorkPageComponent } from '../work-page/work-page.component';
 
 const routes: Routes = [
-  { path: 'magamrol', component: WorkPageComponent},
+  { path: 'magamrol', component: HomeComponent},
   { path: '', redirectTo: '/magamrol', pathMatch: 'full' },
   { path: 'munkaim', component: WorkPageComponent},
 ];

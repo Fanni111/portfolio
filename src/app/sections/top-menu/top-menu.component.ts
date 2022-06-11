@@ -19,7 +19,7 @@ export class TopMenuComponent implements OnInit {
   menuItems: MenuItem[] = [
     {
       label: 'Magamról',
-      link: 'portfolio/magamrol'
+      link: '/magamrol'
     },
     {
       label: 'Munkáim',
