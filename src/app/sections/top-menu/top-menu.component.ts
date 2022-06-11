@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 export interface MenuItem {
   label: string;
   link: string;
+  fragment?: string;
 }
 
 @Component({
@@ -25,25 +26,10 @@ export class TopMenuComponent implements OnInit {
       label: 'Munkáim',
       link: 'munkaim'
     },
-    
-    {
-      label: '/Munkáim',
-      link: '/munkaim'
-    },
-    
-    {
-      label: '/mag',
-      link: '/magamrol'
-    },
-    
-    
-    {
-      label: 'hh',
-      link: '/#/munkaim'
-    },
     {
       label: 'Kapcsolat',
-      link: '#contact-anchor'
+      link: 'magamrol',
+      fragment: 'contact-anchor'
     }
   ];
 
