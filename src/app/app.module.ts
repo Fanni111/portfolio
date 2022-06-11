@@ -21,7 +21,7 @@ import { FloatingMenuComponent } from './work-page/floating-menu/floating-menu/f
 import { FloatingBtnComponent } from './work-page/floating-menu/floating-btn/floating-btn.component';
 import { ImageSliderComponent } from './work-page/image-slider/image-slider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { PathLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -57,7 +57,7 @@ import { PathLocationStrategy, LocationStrategy } from '@angular/common';
     MatIconModule,
     ImageSliderComponent
   ],
-  providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent, ImageSliderComponent]
 })
 export class AppModule { 
