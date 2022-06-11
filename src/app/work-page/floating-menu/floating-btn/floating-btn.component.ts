@@ -16,4 +16,8 @@ export class FloatingBtnComponent implements OnInit {
     console.log("ds" + this.categoryItem.anchorLink);
   }
 
+  getHref(a: string) {
+    return "munkaim";
+  }
+
 }
