@@ -118,6 +118,10 @@ h2 {
     line-height: 150%;
 }
 
+.email-link {
+    color: white;
+}
+
 .ellipse-img-30 {
     max-width: 30vw;
 }
@@ -208,7 +212,7 @@ h2 {
 .contact-container {
     color: $lightGray;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .footer-separator {
