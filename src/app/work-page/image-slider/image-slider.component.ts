@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { NgbCarouselConfig, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 import { ViewChild } from '@angular/core';
 import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'image-slider',
@@ -24,7 +25,10 @@ export class ImageSliderComponent implements OnInit {
   @Input('isExpanded') isExpanded: boolean;
 
   @Input('images') images: string[];
+  @Input('videoSrc') videoSrc: string;
+  safeUrl: SafeResourceUrl;
 
+constructor(public sanitizer: DomSanitizer) { }
 
   togglePaused() {
     if (this.paused) {
@@ -46,7 +50,7 @@ export class ImageSliderComponent implements OnInit {
   }
 
 ngOnInit(): void {
-  
+  this.safeUrl= this.sanitizer.bypassSecurityTrustResourceUrl(this.videoSrc);
 }
 
 }

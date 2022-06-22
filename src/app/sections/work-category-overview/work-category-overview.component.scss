@@ -11,6 +11,11 @@
         align-items: center;
         // max-width: 100%;
         //flex: 1;
+        a {
+            text-decoration: none;
+            color: unset;
+            display: contents;
+        }
         .work-category-icon-wrapper {
             //     display: flex;
             //     max-width: 100%;

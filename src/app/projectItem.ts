@@ -5,13 +5,15 @@ export class ProjectItem {
     category:string; // TODO: make it Category class
     desc:string;
     images: string[];
+    videoSrc: string;
 
-    constructor( imgSrc:string,title:string, category:string, desc:string, images: string[]){
+    constructor( imgSrc:string,title:string, category:string, desc:string, images: string[], videoSrc: string){
             this.imgSrc = imgSrc;
             this.title = title;
             this.category = category;
             this.desc = desc;
             this.images = images;
+            this.videoSrc = videoSrc;
         }
   }
 

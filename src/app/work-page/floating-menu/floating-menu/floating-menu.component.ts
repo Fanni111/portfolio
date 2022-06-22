@@ -19,7 +19,7 @@ export class FloatingMenuComponent implements OnInit {
 
     this.projectCategoryList = [
       new ProjectCategory("assets/images/motion_design_arrow.png",
-      "Motion design", "linear-gradient(to left, #00FFA9, #3EA6DB)", "kripto-anchor"),
+      "Motion design", "linear-gradient(to left, #00FFA9, #3EA6DB)", "motivapp-anchor"),
       new ProjectCategory("assets/images/icon_webdesign.png",
       "Web design", "linear-gradient(to left, #CD4AB6, #00FFA9)", "eskuvokorzo-anchor"),
       new ProjectCategory("assets/images/icon_cam.png",

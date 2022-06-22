@@ -4,7 +4,7 @@
         <div class="project-img-exp-panel gradient-border" [class.expanded-size]="panelOpenState">
             <div class="project-header-img-wrapper">
                 <!-- <img class="img-front" [src]=projectItem.imgSrc /> -->
-                <image-slider [isExpanded]="panelOpenState" [images]="projectItem.images"></image-slider>
+                <image-slider [isExpanded]="panelOpenState" [images]="projectItem.images" [videoSrc]="projectItem.videoSrc"></image-slider>
             </div>
         </div>
     </ng-template>

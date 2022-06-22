@@ -2,7 +2,7 @@
     <ng-template ngbSlide>
         <div class="slider-img-wrapper" [class.expanded-state]="isExpanded">
             <div class="picsum-img-wrapper">
-                <iframe class="embeded-video" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                <iframe class="embeded-video" [src]="safeUrl">
     </iframe>
             </div>
         </div>
