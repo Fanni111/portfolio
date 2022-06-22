@@ -43,7 +43,7 @@
         padding: 2vw;
         transition: all 1.5s;
         &.expanded-size {
-            flex-basis: 75%;
+            flex-basis: 70%;
             padding: 2vw 2vw;
         }
         .project-header-img-wrapper {
@@ -89,7 +89,7 @@
     }
     .project-desc-exp-panel {
         //flex: 1; // egesz jobboldlat kitölti
-        flex-basis: 25%; //a meglevo jobboldali rélsznek csak a 25%tölti ki
+        flex-basis: 30%; //a meglevo jobboldali rélsznek csak a 25%tölti ki
         margin-left: 1.5vw;
         flex-direction: column;
         display: flex;
@@ -118,7 +118,7 @@
         }
     }
     .project-item-desc {
-        font-size: 1.5vw;
+        font-size: 1.2vw;
     }
     .project-main-title-wrapper {
         width: 100%;

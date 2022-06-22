@@ -18,12 +18,12 @@ export class FloatingMenuComponent implements OnInit {
   $gradYellow: #E6FF00;*/
 
     this.projectCategoryList = [
-      new ProjectCategory("assets/images/icon_cam.png",
-      "Videography", "linear-gradient(to left, #3EA6DB, #CD4AB6)", "neptanc-anchor"),
       new ProjectCategory("assets/images/motion_design_arrow.png",
       "Motion design", "linear-gradient(to left, #00FFA9, #3EA6DB)", "kripto-anchor"),
       new ProjectCategory("assets/images/icon_webdesign.png",
       "Web design", "linear-gradient(to left, #CD4AB6, #00FFA9)", "eskuvokorzo-anchor"),
+      new ProjectCategory("assets/images/icon_cam.png",
+      "Videography", "linear-gradient(to left, #3EA6DB, #CD4AB6)", "neptanc-anchor")
     ];
 
   }

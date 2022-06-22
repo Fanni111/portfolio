@@ -1,4 +1,12 @@
 <ngb-carousel #carousel [interval]="10000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
+    <ng-template ngbSlide>
+        <div class="slider-img-wrapper" [class.expanded-state]="isExpanded">
+            <div class="picsum-img-wrapper">
+                <iframe class="embeded-video" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    </iframe>
+            </div>
+        </div>
+    </ng-template>
     <ng-template ngbSlide *ngFor="let img of images; index as i">
         <!-- <div class="carousel-caption">
             <h3>My slide {{i + 1}} title</h3>
