@@ -172,6 +172,7 @@ transition: 3s;
         height: 7vw;
         padding-left: 2vw;
         box-shadow: -5px 5px 25px #000;
+        cursor: pointer;
         &.expanded-content {
             //box-shadow: none;
         }
