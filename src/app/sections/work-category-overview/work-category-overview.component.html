@@ -1,5 +1,5 @@
-<div class="work-container">
-    <div class="work-category-wrapper">
+<div class="work-container base-side-padding">
+    <div class="work-category-wrapper" [style.border-image-source]="videographyCategory?.color">
 
         <a [routerLink]="'/munkaim'" fragment="neptanc-anchor" class="clickable-element">
 
@@ -9,13 +9,13 @@
             </div>
 
             <div class="work-category-title-wrapper">
-                <h3 class="work-category-title">Media design</h3>
+                <h3 class="work-category-title">{{videographyCategory?.title}}</h3>
             </div>
         </a>
 
     </div>
 
-    <div class="work-category-wrapper">
+    <div class="work-category-wrapper" [style.border-image-source]="motionDesignCategory?.color">
 
         <a [routerLink]="'/munkaim'" fragment="motivapp-anchor" class="clickable-element">
 
@@ -25,13 +25,13 @@
             </div>
 
             <div class="work-category-title-wrapper">
-                <h3 class="work-category-title">Motion design</h3>
+                <h3 class="work-category-title">{{motionDesignCategory?.title}}</h3>
             </div>
         </a>
 
     </div>
 
-    <div class="work-category-wrapper">
+    <div class="work-category-wrapper" [style.border-image-source]="webDesignCategory?.color">
         <!-- <img class="work-category-icon" src="assets/images/motion_design_arrow.png" /> -->
 
         <a [routerLink]="'/munkaim'" fragment="eskuvokorzo-anchor" class="clickable-element">
@@ -40,7 +40,7 @@
             </div>
 
             <div class="work-category-title-wrapper">
-                <h3 class="work-category-title">Web design</h3>
+                <h3 class="work-category-title">{{webDesignCategory?.title}}</h3>
             </div>
         </a>
     </div>

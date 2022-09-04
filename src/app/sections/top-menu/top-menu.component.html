@@ -1,11 +1,11 @@
 <mat-toolbar fxLayout="row" color="primary" fxLayoutAlign="end center">
     <a *ngFor="let item of menuItems" [routerLink]="item.link" [fragment]="item?.fragment">
-        <button mat-button fxHide.xs>
+        <button mat-button fxHide.lt-md>
         {{item.label}}
     </button>
     </a>
 
-    <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
+    <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.lt-md>
         <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #dropMenu="matMenu" backdropClass="dropdownMenu">

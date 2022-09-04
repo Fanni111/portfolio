@@ -4,13 +4,17 @@
     justify-content: space-between;
     align-items: center;
     color: $lightGray;
-    padding: 2vw 10vw;
-    font-size: 1.5vw;
+    padding: 2.5vw 10vw;
+    font-size: 1.3rem;
+    @media(max-width: $screenSizeMedium) {
+        font-size: 1rem;
+    }
 }
 
 .social-icon-list {
     display: flex;
     list-style-type: none;
+    margin-bottom: 0;
 }
 
 .social-footer-icon {

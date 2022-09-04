@@ -1,16 +1,28 @@
+@import '../../../variables.scss';
 .work-container {
     display: flex;
     width: 100%;
-    height: 24vw;
+    height: 100%;
+    padding: 32px 0;
+    @media(max-width: $screenSizeMedium) {
+        flex-direction: column;
+        padding: 24px 0;
+        align-items: center;
+    }
     .work-category-wrapper {
         display: flex;
         flex-direction: column;
-        //height: 100%;
-        //width: 100%;
         flex: 1;
         align-items: center;
-        // max-width: 100%;
-        //flex: 1;
+        @media(max-width: $screenSizeMedium) {
+            // border-image-source: linear-gradient(to left, rgb(0, 255, 169), rgb(62, 166, 219));
+            border-image-slice: 1;
+            border-width: 5px;
+            border-style: solid;
+            margin: 12px;
+            width: 65vw;
+            height: 10vh;
+        }
         a {
             text-decoration: none;
             color: unset;
@@ -33,9 +45,6 @@
         .work-category-icon:hover {
             transform: scale(1.25);
             transition: transform 500ms ease-in-out;
-        }
-        h3 {
-            font-size: 1.5vw;
         }
     }
 }

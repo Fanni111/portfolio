@@ -52,7 +52,7 @@
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $screenSizeMedium) {
     .topnav a:not(:first-child) {
         display: none;
     }
@@ -65,7 +65,7 @@
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $screenSizeMedium) {
     .topnav.responsive {
         position: relative;
     }
@@ -86,40 +86,54 @@
     align-items: center;
     flex-direction: row;
     pointer-events: none;
-    height: 42vw;
+    // height: 42vw;
     background-size: cover;
     background-image: url(../../assets/images/bg_grey.png);
+    @media screen and (max-width: $screenSizeMedium) {
+        flex-direction: column;
+        padding-top: 24px;
+    }
 }
 
 .profile-circle-container {
     position: relative;
     display: flex;
-    padding-top: 2vw;
+    // padding-top: 2vw;
+    @media screen and (max-width: $screenSizeMedium) {
+        margin-top: -8vw;
+    }
 }
 
 .about-text-container {
     display: flex;
     flex-direction: column;
     padding-right: 8vw;
+    @media screen and (max-width: $screenSizeMedium) {
+        align-items: center;
+        text-align: center;
+    }
 }
 
 h1 {
-    font-size: 5.5vw;
+    // font-size: 5.5vw;
     margin-bottom: 0;
     font-weight: 100;
 }
 
 h2 {
-    font-size: 2.5vw;
+    // font-size: 2.5vw;
     margin: 2vh 0;
 }
 
 .about-desc,
 .contact-desc,
 .skills-desc {
-    font-size: 1.5vw;
-    line-height: 150%;
-    margin-bottom: 0;
+    font-size: 1.4rem;
+    padding-top: 12px;
+    @media screen and (max-width: $screenSizeMedium) {
+        font-size: 1.4rem;
+        padding-top: 16px;
+    }
 }
 
 .email-link {
@@ -127,7 +141,7 @@ h2 {
 }
 
 .ellipse-img-30 {
-    max-width: 30vw;
+    //max-width: 30vw;
 }
 
 .ellipse-green-blue {
@@ -163,6 +177,10 @@ h2 {
     position: relative;
     pointer-events: none;
     content: url(../../assets/images/profile_fanni.png);
+    max-width: 35vw;
+    @media screen and (max-width: $screenSizeMedium) {
+        max-width: 75vw;
+    }
 }
 
 .fanni-profile-outer {
@@ -177,14 +195,21 @@ h2 {
 
 .skills-section {
     display: flex;
-    height: 20vw;
+    // height: 100%;
     align-items: center;
     max-width: 100%;
-    padding: 2vw 10vw;
+    @media screen and (max-width: $screenSizeMedium) {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
     .skills-cloud-container {
         display: flex;
-        width: 100%;
-        height: 100%;
+        // width: 100%;
+        // height: 100%;
+        @media screen and (max-width: $screenSizeMedium) {
+            width: 50vw;
+            height: 50vw;
+        }
         .skills-cloud {
             width: 100%;
             height: 100%;
@@ -203,13 +228,19 @@ h2 {
 .contact-section {
     display: flex;
     flex-direction: column;
-    padding: 0 10vw;
+}
+
+.work-section-title {
+    background-size: cover;
+    background-image: url(../../assets/images/bg_grey.png);
+    padding: 16px 10vw;
+    text-align: center;
 }
 
 .contact-section {
     background-size: cover;
     background-image: url(../../assets/images/bg_grey.png);
-    padding: 3vw 10vw;
+    padding: 2vw 10vw;
 }
 
 .contact-container {
