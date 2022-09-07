@@ -12,9 +12,9 @@
     <ng-template #expandableDescComp>
 
         <div class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState">
-            <div class="gradiental-border" (click)="changePanelState()">
+            <div class="gradiental-border" (click)="changePanelState()" [ngClass]="projectItem?.category?.cssClass || ''">
                 <div class="project-main-title-wrapper project-title" [class.expanded-content]="panelOpenState">
-                    <div class="work-item-category">{{projectItem?.category}}</div>
+                    <div class="work-item-category">{{projectItem?.category?.title}}</div>
                     <div class="work-item-title">{{projectItem.title}}</div>
                 </div>
             </div>
