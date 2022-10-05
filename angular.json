@@ -109,5 +109,8 @@
             "style": "scss"
         }
     },
-    "defaultProject": "portfolio"
+    "defaultProject": "portfolio",
+    "cli": {
+      "analytics": false
+    }
 }
