@@ -11,7 +11,7 @@
 
     <ng-template #expandableDescComp>
 
-        <div class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState">
+        <div class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState" [class.right-aligned]="!isLeftAligned">
             <div class="gradiental-border" (click)="changePanelState()">
                 <div class="project-main-title-wrapper project-title" [class.expanded-content]="panelOpenState">
                     <div class="work-item-category">{{projectItem?.category}}</div>
