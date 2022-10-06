@@ -1,0 +1,47 @@
+@import "../../variables.scss";
+.my-work-section {
+    display: flex;
+    height: 10vw;
+    align-items: center;
+    background-size: cover;
+    background-image: url(../../assets/images/bg_grey.png);
+    @media screen and (max-width: $screenSizeMedium) {
+        background-position: right;
+        }
+}
+
+.my-work-section h1 {
+    font-size: 3.4vw;
+}
+
+.work-desc-section {
+    display: flex;
+    align-items: center;
+}
+
+.work-intro-wrapper {
+    height: 12vw;
+}
+
+.project-list {
+    padding: 3vw 10vw;
+
+    @media screen and (max-width: $screenSizeMedium) {
+        padding: 8vw 10vw;
+    }
+}
+
+
+.expanded-content {
+    color: $primaryColor;
+    background: $lightWhite;
+    height: 0%;
+    transition: all 2s;
+
+    &.expandedState {
+        height: 100%;
+        overflow-y: scroll;
+        box-shadow: -5px 5px 25px #000;
+        padding: 4% 4% 0 8%;
+    }
+}

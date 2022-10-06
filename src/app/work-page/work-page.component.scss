@@ -6,16 +6,14 @@
             }
             
             .my-work-section {
-                display: flex;
-                height: 10vw;
-                align-items: center;
                 background-size: cover;
-                background-image: url(../../assets/images/bg_grey.png);
-                padding: 2vw 10vw;
-                h1 {
-                    margin-bottom: 0;
-                    font-size: 2.5vw;
-                }
+    background-image: url(../../assets/images/bg_grey.png);
+    padding: 16px 10vw;
+    text-align: center;
+    @media screen and (max-width: $screenSizeMedium) {
+        background-position: right;
+    }
+
             }
             
             .work-desc-section {
@@ -35,8 +33,15 @@
                 flex-direction: column;
                 justify-content: space-between;
                 .projects-desc {
-                    padding-top: 3vw;
+                    padding: 4% 10vw 4% 10vw;
                     font-size: 1.5vw;
+                    text-align: center;
+
+                
+                    @media screen and (max-width: $screenSizeMedium) {
+                        font-size: 1rem;
+                    }
+
                 }
                 .work-category-header {
                     padding-top: 3vw;

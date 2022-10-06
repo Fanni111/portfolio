@@ -235,6 +235,9 @@ h2 {
     background-image: url(../../assets/images/bg_grey.png);
     padding: 16px 10vw;
     text-align: center;
+    @media screen and (max-width: $screenSizeMedium) {
+    background-position: right;
+    }
 }
 
 .contact-section {

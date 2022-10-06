@@ -4,7 +4,7 @@ import { ProjectItem } from '../projectItem';
 @Component({
   selector: 'expandable-project-item',
   templateUrl: './expandable-project-item.component.html',
-  styleUrls: ['./expandable-project-item.component.scss']
+  styleUrls: ['./expandable-project-item.component.scss', './expandable-project-item-base.component.scss']
 })
 export class ExpandableProjectItemComponent implements OnInit {
 
@@ -12,10 +12,12 @@ export class ExpandableProjectItemComponent implements OnInit {
   @Input('projectItem') projectItem: ProjectItem;
   @Input() topPadding: number;
   @Input() isLeftAligned: boolean;
+  @Input() isMobileDevice: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log("---" + this.isMobileDevice);
   }
 
   changePanelState(){

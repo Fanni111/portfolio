@@ -26,9 +26,9 @@
     </ng-template>
 
 
-    <div class="project-item-container" [class.left-aligned-content]="isLeftAligned">
+    <div class="project-item-container" [class.left-aligned-content]="isLeftAligned || isMobileDevice">
 
-        <ng-container *ngIf="isLeftAligned; else rightAligned">
+        <ng-container *ngIf="isLeftAligned || isMobileDevice; else rightAligned">
 
             <ng-container *ngTemplateOutlet="expandableImgComp"></ng-container>
             <ng-container *ngTemplateOutlet="expandableDescComp"></ng-container>

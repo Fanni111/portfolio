@@ -1,7 +1,7 @@
 <div class="work-page">
 
     <div class="my-work-section base-side-padding">
-        <h1>Munkáim</h1>
+        <h2>Munkáim</h2>
     </div>
 
     <floating-menu fxHide.xs></floating-menu>
@@ -11,29 +11,29 @@
             világában élek. Grafikai feladatokkal, kép-illetve videószerkesztéssel foglalkozom, amihez elengedhetetlen, hogy saját forrásaim is legyenek, így került a kamera és a fényképezőgép a kezembe. Az utómunkálatokra is nagy hangsúlyt fektetek,
             hogy az adott pillanatokból a legtöbbet tudjam kihozni.
         </div>
-        <div class="work-category-header" id="motivapp-anchor">
-            <h1>Motion design</h1>
+        <div class="my-work-section base-side-padding work-category-header" id="motivapp-anchor">
+            <h2>Motion design</h2>
         </div>
 
-        <expandable-project-item [projectItem]="motivapp" [isLeftAligned]="true" [topPadding]="5"></expandable-project-item>
-        <expandable-project-item id="kripto-anchor" [projectItem]="kripto" [isLeftAligned]="false" [topPadding]="15"></expandable-project-item>
-        <expandable-project-item [projectItem]="vizio" [isLeftAligned]="true" [topPadding]="5"></expandable-project-item>
-        <expandable-project-item [projectItem]="munkavedelem" [isLeftAligned]="false" [topPadding]="15"></expandable-project-item>
+        <expandable-project-item [projectItem]="motivapp" [isLeftAligned]="true" [topPadding]="5" [isMobileDevice]="isMobileDevice"></expandable-project-item>
+        <expandable-project-item id="kripto-anchor" [projectItem]="kripto" [isLeftAligned]="false" [topPadding]="15"  [isMobileDevice]="isMobileDevice"></expandable-project-item>
+        <expandable-project-item [projectItem]="vizio" [isLeftAligned]="true" [topPadding]="5"  [isMobileDevice]="isMobileDevice"></expandable-project-item>
+        <expandable-project-item [projectItem]="munkavedelem" [isLeftAligned]="false" [topPadding]="15"  [isMobileDevice]="isMobileDevice"></expandable-project-item>
 
-        <div class="work-category-header" id="eskuvokorzo-anchor">
-            <h1>Web design</h1>
+        <div class="my-work-section base-side-padding work-category-header" id="eskuvokorzo-anchor">
+            <h2>Web design</h2>
         </div>
 
-        <expandable-project-item [projectItem]="eskuvoKorzo" [isLeftAligned]="true" [topPadding]="5"></expandable-project-item>
-        <expandable-project-item id="keleszto-anchor" [projectItem]="keleszto" [isLeftAligned]="false" [topPadding]="15"></expandable-project-item>
+        <expandable-project-item [projectItem]="eskuvoKorzo" [isLeftAligned]="true" [topPadding]="5"  [isMobileDevice]="isMobileDevice"></expandable-project-item>
+        <expandable-project-item id="keleszto-anchor" [projectItem]="keleszto" [isLeftAligned]="false" [topPadding]="15"  [isMobileDevice]="isMobileDevice"></expandable-project-item>
 
 
-        <div class="work-category-header" id="neptanc-anchor">
-            <h1>Videography</h1>
+        <div class="my-work-section base-side-padding work-category-header" id="neptanc-anchor">
+            <h2>Videography</h2>
         </div>
 
-        <expandable-project-item [projectItem]="neptanc" [isLeftAligned]="true" [topPadding]="5"></expandable-project-item>
-        <expandable-project-item id="enkicsibp" [projectItem]="enkicsibp" [isLeftAligned]="false" [topPadding]="5"></expandable-project-item>
+        <expandable-project-item [projectItem]="neptanc" [isLeftAligned]="true" [topPadding]="5"  [isMobileDevice]="isMobileDevice"></expandable-project-item>
+        <expandable-project-item id="enkicsibp" [projectItem]="enkicsibp" [isLeftAligned]="false" [topPadding]="5"  [isMobileDevice]="isMobileDevice"></expandable-project-item>
 
         <footer></footer>
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectItem } from '../projectItem';
+import { DeviceDetectorService } from '../services/deviceDetectorService';
 
 @Component({
   selector: 'app-work-page',
@@ -18,7 +19,9 @@ export class WorkPageComponent implements OnInit {
   eskuvoKorzo: ProjectItem;
   keleszto: ProjectItem;
 
-  constructor() { 
+  isMobileDevice: boolean;
+
+  constructor(deviceDetector: DeviceDetectorService) { 
     this.motivapp = new ProjectItem("assets/images/videography/neptanc.jpg","Motivapp", "Motion design","Egy mobilalkalmazás, mely kreatív jutalomrendszer alkalmazását teszi lehetővé a gyakorlatban. A MotivApp használatával intézményedben oktató tanárok korszerű tanulmányi környezetet teremthetnek a diákoknak. Az applikációt bemutató videó elkészítésével jártultam hozzá a Hiventures támogatásban részült project fejlesztéséhez.",
     [], "https://www.youtube.com/embed/g6hJ4Z_0j64");
     this.kripto = new ProjectItem("assets/images/webdesign/eskuvokorzo_mockup.png","Kriptovalutákról egyszerűen", "Motion design","Vajon te mennyit tudsz a kriptovaluták világáról? Edukációs céllal készült az MNB OKTATÁSI KLUB: THINK & EXPLAIN! videópályázatára a kriptovaluták témájában. Célja, hogy ez a manapság egyre többet használt pénzügyi fogalom könnyen fogyasztható formában, kreatív megköszelítéssel mindenki számára érthetővé válljon.",
@@ -44,6 +47,9 @@ export class WorkPageComponent implements OnInit {
     this.enkicsibp = new ProjectItem("assets/images/videography/neptanc.jpg","Az én kicsi Budapestem", "Videography",",,HA LENNE EGY NAPOD EGY VILÁGÖRÖKSÉG VÁROSBAN” címmel hirdetett videópályázatot a Világörökség Városok Szervezete (OWHC Organisation of World Heritage Cities). Erre készítettem el a fővárosunkat megelevenítő kisfilmet ,,Az én kicsi Budapestem”-et. Egy gyerekszobából indulva ismerhetjük meg Budapest történetét, nevezetességeit melyek a szemünk láttára kelnek életre. A videóval a hazai fordulóból továbbjutottam a nemzetközi mezőny élvonalába.",
     [],
     "https://www.youtube.com/embed/KahvokmjkOo");
+
+    this.isMobileDevice = deviceDetector.isMobileDevice();
+    console.log('sss' + this.isMobileDevice);
   }
 
   ngOnInit(): void {
