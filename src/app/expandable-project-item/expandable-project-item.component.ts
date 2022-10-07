@@ -17,7 +17,6 @@ export class ExpandableProjectItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("---" + this.isMobileDevice);
   }
 
   changePanelState(){

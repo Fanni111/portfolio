@@ -13,7 +13,6 @@ export class FloatingBtnComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("ds" + this.categoryItem.anchorLink);
   }
 
   getHref(a: string) {
