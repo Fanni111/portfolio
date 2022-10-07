@@ -98,10 +98,7 @@
 .profile-circle-container {
     position: relative;
     display: flex;
-    // padding-top: 2vw;
-    @media screen and (max-width: $screenSizeMedium) {
-        margin-top: -8vw;
-    }
+    margin: 10% 0;
 }
 
 .about-text-container {

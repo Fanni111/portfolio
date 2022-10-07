@@ -23,8 +23,13 @@
         background-color: $lightWhite; //white;
         flex-basis: 35%;
         justify-content: center;
-        padding: 2vw;
+        padding: 2vw 0vw;
         transition: all 1.5s;
+
+        @media screen and (max-width: $screenSizeMedium) {
+        padding: 5vw 0vw;
+        }
+
         &.expanded-size {
             flex-basis: 70%;
             padding: 2vw 2vw;
