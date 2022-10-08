@@ -44,7 +44,10 @@
 
                 }
                 .work-category-header {
-                    padding-top: 3vw;
-                    padding-left: 10vw;
+                    // padding-top: 3vw;
+                    // padding-left: 10vw;
+                    h2 {
+                        margin:0
+                    }
                 }
             }

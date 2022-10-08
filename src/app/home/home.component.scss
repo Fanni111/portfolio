@@ -124,7 +124,7 @@ h2 {
 
 .about-desc,
 .contact-desc,
-.skills-desc {
+.skills-desc-text {
     font-size: 1.4rem;
     padding-top: 12px;
     @media screen and (max-width: $screenSizeMedium) {
@@ -192,16 +192,16 @@ h2 {
 
 .skills-section {
     display: flex;
-    // height: 100%;
+    // max-height: 40vh;
     align-items: center;
-    max-width: 100%;
+    // max-width: 100%;
     @media screen and (max-width: $screenSizeMedium) {
         flex-direction: column-reverse;
         text-align: center;
     }
     .skills-cloud-container {
         display: flex;
-        // width: 100%;
+        width: 25%;
         // height: 100%;
         @media screen and (max-width: $screenSizeMedium) {
             width: 50vw;
@@ -216,11 +216,37 @@ h2 {
 }
 
 .skills-desc {
+    height: 100%; // 25vw;
+    width: 75%;
+    justify-content: center;
     padding-left: 4vw;
     display: flex;
-    margin-top: 1rem;
+    flex-direction: column;
 }
 
+.skills-desc-text {
+    display: flex;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.icon-asset{
+    display: flex;
+    // max-height: 5vh;
+    width: 50%;
+    height: auto;
+    @media screen and (max-width: $screenSizeMedium) {
+        width:100%;
+    margin-bottom: 10%;
+
+    }
+
+    img {
+        min-width: 0px;
+        padding-right: 2%;
+        flex: 1;
+    }
+}
 .work-section,
 .contact-section {
     display: flex;

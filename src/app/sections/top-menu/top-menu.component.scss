@@ -9,6 +9,13 @@ a:active {
     color: $lightGray;
 }
 
+.selectedMenuItem {
+    border-bottom: 10px solid;
+  border-image-slice: 1;
+  border-width: 3px;
+    border-image-source: linear-gradient(to left, #00FFA9, #3EA6DB);
+}
+
 .navigation-items {
     list-style-type: none;
     padding: 0;
@@ -34,5 +41,18 @@ mat-toolbar {
 }
 
 .toolbar-title {
-    
+    display: flex;
+    height: 100%;
+    align-items: center;
+    img {
+        height: 50%;
+        width: auto;
+        margin-left: 10vw;
+
+    @media screen and (max-width: $screenSizeMedium) {
+
+        margin-left: 5vw;
+
+    }
+    }
 }

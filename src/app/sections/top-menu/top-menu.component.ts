@@ -25,12 +25,12 @@ export class TopMenuComponent implements OnInit {
     {
       label: 'Munkáim',
       link: 'munkaim'
-    },
+    }/*,
     {
       label: 'Kapcsolat',
       link: 'magamrol',
       fragment: 'contact-anchor'
-    }
+    }*/
   ];
 
 
