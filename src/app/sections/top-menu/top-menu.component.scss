@@ -1,58 +1,68 @@
-@import '../../../variables.scss';
+@import "../../../variables.scss";
+
+.top-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 a:hover,
 a:active {
-    color: $lightGray;
+  color: $lightGray;
 }
 
 .selectedMenuItem {
-    border-bottom: 10px solid;
+  border-bottom: 10px solid;
   border-image-slice: 1;
   border-width: 3px;
-    border-image-source: linear-gradient(to left, #00FFA9, #3EA6DB);
+  border-image-source: linear-gradient(to left, #00ffa9, #3ea6db);
 }
 
 .navigation-items {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 mat-toolbar {
-    border-radius: 3px;
+  border-radius: 3px;
 }
 
-@media(max-width: $screenSizeMedium) {
-    mat-toolbar {
-        border-radius: 0px;
-    }
+@media (max-width: $screenSizeMedium) {
+  mat-toolbar {
+    border-radius: 0px;
+  }
 }
 
 ::ng-deep .mat-menu-panel {
-    min-width: 100% !important;
+  min-width: 100% !important;
 }
 
 ::ng-deep .cdk-overlay-pane {
-    min-width: 100% !important;
+  min-width: 100% !important;
 }
 
 .toolbar-title {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    img {
-        height: 50%;
-        width: auto;
-        margin-left: 10vw;
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+  .logo-icon {
+    margin-left: 10vw;
+    height: 50%;
+  }
+
+  .logo-text {
+    height: 30%;
+    margin-left: 1.5vw;
 
     @media screen and (max-width: $screenSizeMedium) {
-
-        margin-left: 5vw;
-
+      margin-left: 5vw;
     }
-    }
+  }
 }
