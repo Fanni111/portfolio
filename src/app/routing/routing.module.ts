@@ -5,26 +5,24 @@ import { HomeComponent } from '../home/home.component';
 import { WorkPageComponent } from '../work-page/work-page.component';
 
 const routes: Routes = [
-  { path: '',  component: HomeComponent },
-  { path: 'magamrol', component: HomeComponent},
-  { path: '', redirectTo: '/magamrol', pathMatch: 'full' },
-  { path: 'munkaim', component: WorkPageComponent}
-
+  { path: '', component: HomeComponent },
+  // { path: 'magamrol', component: HomeComponent},
+  // { path: '', redirectTo: '/magamrol', pathMatch: 'full' },
+  { path: 'munkaim', component: WorkPageComponent },
 ];
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled',
-    anchorScrolling: 'enabled', 
-    
-    relativeLinkResolution: 'legacy',
-    onSameUrlNavigation: 'reload',
-    useHash: true })
+      anchorScrolling: 'enabled',
+
+      relativeLinkResolution: 'legacy',
+      onSameUrlNavigation: 'reload',
+      useHash: true,
+    }),
   ],
-  exports: [
-    RouterModule
-  ],
-  declarations: []
+  exports: [RouterModule],
+  declarations: [],
 })
-export class RoutingModule { }
+export class RoutingModule {}

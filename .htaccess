@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^borbasfanni.hu [NC]
+RewriteRule ^(.*)$ http://www.borbasfanni.hu/$1 [L,R=301]

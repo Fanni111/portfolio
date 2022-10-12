@@ -5,7 +5,7 @@
     <img class="logo-text" src="assets/images/fanniborbas_logo_text.png" />
     </span>
     <span>
-    <a *ngFor="let item of menuItems" [routerLink]="item.link" routerLinkActive="active" #rla="routerLinkActive" [fragment]="item?.fragment">
+    <a *ngFor="let item of menuItems" [routerLink]="item.link" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" #rla="routerLinkActive" [fragment]="item?.fragment">
         <button mat-button fxHide.lt-md [ngClass]="rla.isActive ? 'selectedMenuItem' : ''">
         {{item.label}}
     </button>

@@ -9,36 +9,31 @@ export interface MenuItem {
 @Component({
   selector: 'top-menu',
   templateUrl: './top-menu.component.html',
-  styleUrls: ['./top-menu.component.scss']
+  styleUrls: ['./top-menu.component.scss'],
 })
 
 /*
 https://www.youtube.com/watch?v=iWYP3NtKQjs */
-
 export class TopMenuComponent implements OnInit {
-
   menuItems: MenuItem[] = [
     {
       label: 'Magamról',
-      link: 'magamrol'
+      link: '',
     },
     {
       label: 'Munkáim',
-      link: 'munkaim'
-    }/*,
+      link: 'munkaim',
+    } /*,
     {
       label: 'Kapcsolat',
       link: 'magamrol',
       fragment: 'contact-anchor'
-    }*/
+    }*/,
   ];
 
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  public onToggleSidenav = () => { 
-  }
+  public onToggleSidenav = () => {};
 }
