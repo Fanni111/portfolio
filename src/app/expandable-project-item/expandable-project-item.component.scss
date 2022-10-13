@@ -1,198 +1,206 @@
 @import "../../variables.scss";
 
-
 .project-item-container {
+  display: flex;
+  height: 24vw;
+  z-index: 1;
+  position: relative;
+  justify-content: end;
+
+  @media screen and (max-width: $screenSizeMedium) {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &.left-aligned-content {
+    justify-content: start;
+  }
+  .project-img-exp-panel {
+    width: 100%;
+    max-height: 100%;
     display: flex;
-    height: 24vw;
-    z-index: 1;
-    position: relative;
-    justify-content: end;
+    background-color: $lightWhite; //white;
+    flex-basis: 35%;
+    justify-content: center;
+    padding: 2vw 0vw;
+    transition: all 1.5s;
 
     @media screen and (max-width: $screenSizeMedium) {
-        flex-direction: column;
-        height: 100%;
+      padding: 5vw 0vw;
     }
 
-    &.left-aligned-content {
-        justify-content: start;
+    &.expanded-size {
+      flex-basis: 70%;
+      padding: 2vw 2vw;
     }
-    .project-img-exp-panel {
+    .project-header-img-wrapper {
+      align-self: center;
+      width: 100%;
+      height: 100%;
+      img {
         width: 100%;
-        max-height: 100%;
-        display: flex;
-        background-color: $lightWhite; //white;
-        flex-basis: 35%;
-        justify-content: center;
-        padding: 2vw 0vw;
-        transition: all 1.5s;
-
-        @media screen and (max-width: $screenSizeMedium) {
-        padding: 5vw 0vw;
-        }
-
-        &.expanded-size {
-            flex-basis: 70%;
-            padding: 2vw 2vw;
-        }
-        .project-header-img-wrapper {
-            align-self: center;
-            width: 100%;
-            height: 100%;
-            img {
-                width: 100%;
-            }
-        }
-        &.gradient-border {
-            --borderWidth: 3px;
-            background: $darkGray; // #1D1F20;
-            position: relative;
-            
-             :after {
-                content: '';
-                position: absolute;
-                top: calc(-1 * var(--borderWidth));
-                left: calc(-1 * var(--borderWidth));
-                height: calc(100% + var(--borderWidth) * 2);
-                width: calc(100% + var(--borderWidth) * 2);
-                background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-                z-index: -1;
-                animation: animatedgradient 3s ease alternate infinite;
-                background-size: 300% 300%;
-                box-shadow: -3px 3px 15px #000;
-            }
-            @keyframes animatedgradient {
-                0% {
-                    background-position: 0% 50%;
-                }
-                50% {
-                    background-position: 100% 50%;
-                }
-                100% {
-                    background-position: 0% 50%;
-                }
-            }
-        }
+      }
     }
-    .project-desc-exp-panel {
-        flex-basis: 30%; //a meglevo jobboldali rélsznek csak a 25%tölti ki
-        margin-left: 1.5vw;
-        flex-direction: column;
-        display: flex;
-        padding-top: 5%;
-        transition: all 1.5s;
+    &.gradient-border {
+      --borderWidth: 3px;
+      background: $darkGray; // #1D1F20;
+      position: relative;
 
-        &.fixed-expanded-size {
-            padding-top: 0;
-            @media screen and (max-width: $screenSizeMedium) {
-                padding-top: 5%;
-            }
+      :after {
+        content: "";
+        position: absolute;
+        top: calc(-1 * var(--borderWidth));
+        left: calc(-1 * var(--borderWidth));
+        height: calc(100% + var(--borderWidth) * 2);
+        width: calc(100% + var(--borderWidth) * 2);
+        background: linear-gradient(
+          60deg,
+          #f79533,
+          #f37055,
+          #ef4e7b,
+          #a166ab,
+          #5073b8,
+          #1098ad,
+          #07b39b,
+          #6fba82
+        );
+        z-index: -1;
+        animation: animatedgradient 3s ease alternate infinite;
+        background-size: 300% 300%;
+        box-shadow: -3px 3px 15px #000;
+      }
+      @keyframes animatedgradient {
+        0% {
+          background-position: 0% 50%;
         }
-
-        &.right-aligned {
-        margin-left: 0;
-        margin-right: 1.5vw;
+        50% {
+          background-position: 100% 50%;
         }
-        @media screen and (max-width: $screenSizeMedium) {
-            padding-top: 5%;
-            margin-left:0;
-                }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
     }
-    .gradiental-border {
-        display: flex;
-         :after {
-            content: '\A';
-            position: absolute;
-            background: linear-gradient(to top, $gradGreen 10%, $gradBlue 70%);
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 5%;
-            height: 100%;
-            transition: all 1.5s;
-            border-right: none;
-        }
-         :hover:after {
-            width: 100%;
-        }
-    }
-    .project-item-desc {
-        font-size: 1.2vw;
+  }
+  .project-desc-exp-panel {
+    flex-basis: 30%; //a meglevo jobboldali rélsznek csak a 25%tölti ki
+    margin-left: 1.5vw;
+    flex-direction: column;
+    display: flex;
+    padding-top: 5%;
+    transition: all 1.5s;
 
-        @media screen and (max-width: $screenSizeMedium) {
-        font-size: 1rem;
-        }
+    &.fixed-expanded-size {
+      padding-top: 0;
     }
-    .project-main-title-wrapper {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        height: 100%;
-        background: $lightWhite;
-        box-shadow: none;
-        color: $primaryColor;
 
-         :before {
-            content: ""; // white div szelen levo kis vonalak sarokba
-            top: 1vw;
-            right: 5%;
-            width: 6px;
-            height: 6px;
-            border-top: 2px solid black;
-            border-right: 2px solid black;
-            position: absolute;
-        }
-         :after {
-            content: ""; // white div szelen levo kis vonalak sarokba
-            bottom: 1vw;
-            right: 5%;
-            width: 6px;
-            height: 6px;
-            border-bottom: 2px solid black;
-            border-right: 2px solid black;
-            position: absolute;
-            background: none; // semlegesíteni a gradient hatasat
-            top: auto; // semlegesiti a gradiental border hatast ami afterre van
-            left: auto;
-        }
-         :hover:after {
-            width: auto; // semleg a grad-border width change-t
-        }
+    &.right-aligned {
+      margin-left: 0;
+      margin-right: 1.5vw;
+      @media screen and (max-width: $screenSizeMedium) {
+        margin-bottom: 5%;
+      }
     }
-    .project-title {
-        color: $primaryColor;
-        //height: 12vw; //set the default height of the project title when not expanded
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        height: 7vw;
-        padding-left: 8%; //2vw;
-        box-shadow: -5px 5px 25px #000;
-        cursor: pointer;
-        .work-item-category {
-            font-size: 1vw;
-            margin-bottom: 0.2vw;
-            z-index: 10;
-        }
-        .work-item-title {
-            font-size: 1.5vw;
-            z-index: 10;
-        }
-
-        @media screen and (max-width: $screenSizeMedium) {
-            height: 14vw;
-            .work-item-category {
-                font-size: 0.6rem;
-            }
-            .work-item-title {
-                font-size: 1.4rem;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                width: 90%;
-            }
-
-        }
-        
+    @media screen and (max-width: $screenSizeMedium) {
+      padding-top: 5%;
+      margin-left: 0;
+      margin-right: 0;
     }
+  }
+  .gradiental-border {
+    display: flex;
+    :after {
+      content: "\A";
+      position: absolute;
+      background: linear-gradient(to top, $gradGreen 10%, $gradBlue 70%);
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 5%;
+      height: 100%;
+      transition: all 1.5s;
+      border-right: none;
+    }
+    :hover:after {
+      width: 100%;
+    }
+  }
+  .project-item-desc {
+    font-size: 1.2vw;
+
+    @media screen and (max-width: $screenSizeMedium) {
+      font-size: 1rem;
+    }
+  }
+  .project-main-title-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    height: 100%;
+    background: $lightWhite;
+    box-shadow: none;
+    color: $primaryColor;
+
+    :before {
+      content: ""; // white div szelen levo kis vonalak sarokba
+      top: 1vw;
+      right: 5%;
+      width: 6px;
+      height: 6px;
+      border-top: 2px solid black;
+      border-right: 2px solid black;
+      position: absolute;
+    }
+    :after {
+      content: ""; // white div szelen levo kis vonalak sarokba
+      bottom: 1vw;
+      right: 5%;
+      width: 6px;
+      height: 6px;
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      position: absolute;
+      background: none; // semlegesíteni a gradient hatasat
+      top: auto; // semlegesiti a gradiental border hatast ami afterre van
+      left: auto;
+    }
+    :hover:after {
+      width: auto; // semleg a grad-border width change-t
+    }
+  }
+  .project-title {
+    color: $primaryColor;
+    //height: 12vw; //set the default height of the project title when not expanded
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 7vw;
+    padding-left: 8%; //2vw;
+    box-shadow: -5px 5px 25px #000;
+    cursor: pointer;
+    .work-item-category {
+      font-size: 1vw;
+      margin-bottom: 0.2vw;
+      z-index: 10;
+    }
+    .work-item-title {
+      font-size: 1.5vw;
+      z-index: 10;
+    }
+
+    @media screen and (max-width: $screenSizeMedium) {
+      height: 14vw;
+      .work-item-category {
+        font-size: 0.6rem;
+      }
+      .work-item-title {
+        font-size: 1.4rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 90%;
+      }
+    }
+  }
 }
