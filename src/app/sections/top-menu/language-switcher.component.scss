@@ -1,6 +1,13 @@
+::ng-deep .cdk-overlay-pane .langMenuPanel {
+  min-width: 10vw !important;
+  position: absolute;
+  right: 0;
+}
+
 .menuitem {
   display: flex;
   align-items: center;
+  width: 10vw;
   width: 10vw;
 
   .lang-icon {
@@ -11,9 +18,4 @@
 
 .mat-menu-content {
   padding: 0;
-}
-
-::ng-deep .cdk-overlay-pane {
-  min-width: auto !important;
-  min-height: auto !important;
 }

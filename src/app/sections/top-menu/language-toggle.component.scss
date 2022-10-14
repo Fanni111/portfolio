@@ -1,0 +1,17 @@
+.toggle-group {
+  width: 100%;
+  display: flex;
+}
+.toggle-btn-item {
+  display: flex;
+  width: 50%;
+}
+
+.lang-icon {
+  width: 30%;
+  padding-right: 5%;
+}
+
+::ng-deep .mat-button-toggle-label-content {
+  display: flex !important;
+}

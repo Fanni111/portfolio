@@ -26,6 +26,9 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageSwitcherComponent } from './sections/top-menu/language-switcher.component';
+import { LanguageToggleComponent } from './sections/top-menu/language-toggle.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { FormsModule } from '@angular/forms';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -45,6 +48,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FloatingBtnComponent,
     ImageSliderComponent,
     LanguageSwitcherComponent,
+    LanguageToggleComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +64,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatExpansionModule,
     NgbModule,
     HttpClientModule,
+    FormsModule,
+    MatButtonToggleModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

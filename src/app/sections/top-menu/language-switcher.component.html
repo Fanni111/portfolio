@@ -2,7 +2,7 @@
   <img [src] = "selectedLanguage.icon" class="lang-icon"/>
   <mat-icon>arrow_drop_down</mat-icon>
 </button>
-<mat-menu #beforeMenu="matMenu" xPosition="before">
+<mat-menu #beforeMenu="matMenu" xPosition="before" class="langMenuPanel">
   <button *ngFor="let item of langMenuitems" mat-menu-item class="menuitem" (click)="onLanguageChange(item)">
     <img [src] = "item.icon" class="lang-icon"/>
     <div>{{item.title}}</div>

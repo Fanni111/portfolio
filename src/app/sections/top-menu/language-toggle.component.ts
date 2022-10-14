@@ -8,11 +8,11 @@ export interface LangMenuItem {
 }
 
 @Component({
-  selector: 'language-switcher',
-  templateUrl: './language-switcher.component.html',
-  styleUrls: ['./language-switcher.component.scss'],
+  selector: 'language-toggle',
+  templateUrl: './language-toggle.component.html',
+  styleUrls: ['./language-toggle.component.scss'],
 })
-export class LanguageSwitcherComponent implements OnInit {
+export class LanguageToggleComponent implements OnInit {
   ngOnInit(): void {}
 
   selectedLanguage: LangMenuItem;
@@ -31,8 +31,11 @@ export class LanguageSwitcherComponent implements OnInit {
 
   constructor(private translateService: TranslateService) {
     this.selectedLanguage = this.langMenuitems[0];
+  }
+
+  ngOninit() {
     this.translateService.setDefaultLang(this.selectedLanguage.label);
-    this.translateService.setDefaultLang(this.selectedLanguage.label);
+    console.log('sss' + this.selectedLanguage.label);
   }
 
   public onLanguageChange(selectedLanguage: LangMenuItem) {
