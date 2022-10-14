@@ -8,13 +8,13 @@ import { RoutingModule } from './routing/routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
-import { MatMenuModule} from '@angular/material/menu';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TopMenuComponent } from './sections/top-menu/top-menu.component';
 import { FooterComponent } from './sections/footer/footer.component';
 import { WorkPageComponent } from './work-page/work-page.component';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { ExpandableProjectItemComponent } from './expandable-project-item/expandable-project-item.component';
 import { WorkCategoryOverviewComponent } from './sections/work-category-overview/work-category-overview.component';
 import { FloatingMenuComponent } from './work-page/floating-menu/floating-menu/floating-menu.component';
@@ -22,6 +22,15 @@ import { FloatingBtnComponent } from './work-page/floating-menu/floating-btn/flo
 import { ImageSliderComponent } from './work-page/image-slider/image-slider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LanguageSwitcherComponent } from './sections/top-menu/language-switcher.component';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -34,7 +43,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     WorkCategoryOverviewComponent,
     FloatingMenuComponent,
     FloatingBtnComponent,
-    ImageSliderComponent
+    ImageSliderComponent,
+    LanguageSwitcherComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,19 +58,26 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     MatDividerModule,
     FlexLayoutModule,
     MatExpansionModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
-  exports:[
+  exports: [
     MatSidenavModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    ImageSliderComponent
+    ImageSliderComponent,
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
-  bootstrap: [AppComponent, ImageSliderComponent]
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  bootstrap: [AppComponent, ImageSliderComponent],
 })
-export class AppModule { 
-
+export class AppModule {
   /**https://code-maze.com/angular-material-navigation/ */
 }

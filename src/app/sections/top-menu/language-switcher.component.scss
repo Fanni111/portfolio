@@ -1,0 +1,19 @@
+.menuitem {
+  display: flex;
+  align-items: center;
+  width: 10vw;
+
+  .lang-icon {
+    height: 40%;
+    padding-right: 10%;
+  }
+}
+
+.mat-menu-content {
+  padding: 0;
+}
+
+::ng-deep .cdk-overlay-pane {
+  min-width: auto !important;
+  min-height: auto !important;
+}
