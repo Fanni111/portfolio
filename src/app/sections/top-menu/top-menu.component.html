@@ -8,7 +8,7 @@
     <span class="top-menu-wrapper">
     <a *ngFor="let item of menuItems" [routerLink]="item.link" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" #rla="routerLinkActive" [fragment]="item?.fragment">
         <button mat-button fxHide.lt-md [ngClass]="rla.isActive ? 'selectedMenuItem' : ''">
-        {{item.label}}
+        {{'TOPNAV.' + item.label | translate}}
     </button>
     </a>
     <language-switcher fxHide.lt-md></language-switcher>
@@ -23,7 +23,7 @@
         <ng-container *ngFor="let item of menuItems">
             <a [routerLink]="item.link" [fragment]="item?.fragment">
                 <button mat-menu-item>
-                {{item.label}}
+        {{'TOPNAV.' + item.label | translate}}
             </button>
             </a>
 

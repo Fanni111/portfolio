@@ -1,6 +1,24 @@
 {
-"HOME": {
-  "ABOUT": "Magamrol szoveg"
+  "TOPNAV": {
+    "Magamról": "Magamról",
+    "Munkáim": "Munkáim"
+  },
+
+"MAGAMROL": {
+  "ABOUT-TEXT": "Célom, hogy az elképzeléseknek egyedi, kreatív megvalósítást formáljak. Legyen szó animáció, motion design videó készítésről vagy hangulatvideó gyártásról. Amit a szakmáról tudok, mind éles projecteken keresztül tanultam.",
+"SKILLS-TEXT": "Programozóként webfejlesztéssel foglalkozom, melyhez elengedhetetlennek tartom a felhasználó központú felületek tervezését és reszponzív megoldások kialakítását. Nagy hangsúlyt fektetek a funkcionalitás mellett a design tervezésére is, melyhez a statikus grafikai elemek mellett animációkat is készítek. Motion design videók, animációkon keresztül azonnal egy erősebb, mélyebb kapcsolatot teremtve a célközönséggel, hamar kialakul egy bizalmi kapcsolat. Hiszek a történetmesélés erejében, mely képest hatást kelteni, összekötni és korlátokat ledönteni az emberekben.",
+"KAPCSOLAT": "Kapcsolat",
+"KAPCSOLAT-TEXT": "<p>Ha tetszik a munkám és egy kreatív, rugalmas és ötletekkel teli alkotótársra van szükséged, dolgozzunk együtt!<br>Vedd fel velem a kapcsolatot a <a class='email-link' href='mailto: fanni.borbas11@gmail.com'>fanni.borbas11@gmail.com</a> e-mail-címen!</p>"
+},
+
+"MUNKAIM": {
+  "TOP-DESC": "Imádok alkotni, kreálni valami újat legyen szó egy weboldalról, videóról, animációról vagy épp egy programkódról. A kihívások motiválnak mind az életben, mind a munkában így igyekszem a felmerülő problémákat is annak tekinteni. Grafikai tervezéssel, kép-illetve videószerkesztéssel foglalkozom, amihez elengedhetetlen, hogy saját forrásaim is legyenek, így került a kamera és a fényképezőgép a kezembe. Célom, hogy az aktuális projektekből a legtöbbet tudjam kihozni.",
+
+  "MOTIVAPP": "Egy mobilalkalmazás, mely kreatív jutalomrendszer alkalmazását teszi lehetővé a gyakorlatban. A MotivApp használatával intézményedben oktató tanárok korszerű tanulmányi környezetet teremthetnek a diákoknak. Az applikációt bemutató videó elkészítésével jártultam hozzá a Hiventures támogatásban részült project fejlesztéséhez.",
+
+  "CRYPTO-TITLE": "Kriptovalutákról egyszerűen",
+  "CRYPT": "Vajon te mennyit tudsz a kriptovaluták világáról? Edukációs céllal készült az MNB OKTATÁSI KLUB: THINK & EXPLAIN! videópályázatára a kriptovaluták témájában. Célja, hogy ez a manapság egyre többet használt pénzügyi fogalom könnyen fogyasztható formában, kreatív megköszelítéssel mindenki számára érthetővé válljon."
+
 }
 
 }

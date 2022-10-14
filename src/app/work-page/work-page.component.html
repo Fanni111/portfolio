@@ -1,13 +1,12 @@
 <div class="work-page">
 
     <div class="my-work-section base-side-padding">
-        <h2>Munkáim</h2>
+        <h2 [translate]="'TOPNAV.Munkáim'"></h2>
     </div>
 
     <floating-menu fxHide.xs></floating-menu>
     <div class="project-list">
-        <div class="base-side-padding projects-desc">
-            Imádok alkotni, kreálni valami újat legyen szó egy weboldalról, videóról, animációról vagy épp egy programkódról. A kihívások motiválnak mind az életben, mind a munkában így igyekszem a felmerülő problémákat is annak tekinteni. Grafikai tervezéssel, kép-illetve videószerkesztéssel foglalkozom, amihez elengedhetetlen, hogy saját forrásaim is legyenek, így került a kamera és a fényképezőgép a kezembe. Célom, hogy az aktuális projektekből a legtöbbet tudjam kihozni.
+        <div class="base-side-padding projects-desc" [innerHtml]="'MUNKAIM.TOP-DESC' | translate">
         </div>
         <div class="my-work-section base-side-padding work-category-header" id="motivapp-anchor">
             <h2>Motion design</h2>

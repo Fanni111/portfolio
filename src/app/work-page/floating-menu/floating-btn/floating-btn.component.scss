@@ -1,54 +1,53 @@
 @import "../../../../variables.scss";
 .floating-btn {
-    width: 6vw;
-    height: 6vw;
-    // border: 10px solid;
-    border-image-slice: 1;
-    border-width: 3px;
-    //border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-    background-color: $darkGray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .btn-img {
-        width: 60%;
-         :hover {
-            // width: 80%; // TODO: better resize
-        }
+  width: 6vw;
+  height: 6vw;
+  // border: 10px solid;
+  border-image-slice: 1;
+  border-width: 3px;
+  //border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  background-color: $darkGray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .btn-img {
+    width: 60%;
+    :hover {
+      // width: 80%; // TODO: better resize
     }
+  }
 }
 
 .tooltip {
-    position: relative;
-    opacity: 1;
+  position: relative;
+  opacity: 1;
 }
 
 .tooltip:before {
-    display: block;
-    opacity: 0;
-    pointer-events: none;
-    position: absolute;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
 }
 
 .tooltip:before {
-    background: #f2f2f2;
-    content: attr(data-title);
-    font-size: 1.5vw;
-    padding: 6px 10px;
-    white-space: nowrap;
-    bottom: 1vw;
-    left: 6vw;
+  background: #f2f2f2;
+  content: attr(data-title);
+  font-size: 1.4vw;
+  padding: 6px 10px;
+  white-space: nowrap;
+  bottom: 1vw;
+  left: 6vw;
 }
-
 
 /* expand */
 
 .tooltip.expand:before {
-    transform: scale3d(.2, .2, 1);
-    transition: all .2s ease-in-out;
+  transform: scale3d(0.2, 0.2, 1);
+  transition: all 0.2s ease-in-out;
 }
 
 .tooltip.expand:hover:before {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
 }

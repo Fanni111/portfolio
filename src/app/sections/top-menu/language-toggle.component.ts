@@ -36,6 +36,7 @@ export class LanguageToggleComponent implements OnInit {
   ngOninit() {
     this.translateService.setDefaultLang(this.selectedLanguage.label);
     console.log('sss' + this.selectedLanguage.label);
+    this.translateService.use(this.selectedLanguage.label);
   }
 
   public onLanguageChange(selectedLanguage: LangMenuItem) {
