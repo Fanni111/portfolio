@@ -139,7 +139,6 @@ export class WorkPageComponent implements OnInit {
     );
 
     this.isMobileDevice = deviceDetector.isMobileDevice();
-    console.log('sss' + this.isMobileDevice);
   }
 
   ngOnInit(): void {}
