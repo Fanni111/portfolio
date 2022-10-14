@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 export interface MenuItem {
   label: string;
@@ -30,8 +31,11 @@ export class TopMenuComponent implements OnInit {
       fragment: 'contact-anchor'
     }*/,
   ];
+  selectedLanguage: string;
 
-  constructor() {}
+  constructor(private translateService: TranslateService) {
+    this.translateService.setDefaultLang('hu');
+  }
 
   ngOnInit(): void {}
 
