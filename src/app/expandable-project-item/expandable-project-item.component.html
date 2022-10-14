@@ -15,12 +15,12 @@
             <div class="gradiental-border" (click)="changePanelState()">
                 <div class="project-main-title-wrapper project-title" [class.expanded-content]="panelOpenState">
                     <div class="work-item-category">{{projectItem?.category}}</div>
-                    <div class="work-item-title">{{projectItem.title}}</div>
+                    <div class="work-item-title">{{'PROJECT.' + projectItem.title + '.TITLE' | translate}}</div>
                 </div>
             </div>
 
             <div class="expanded-content" [class.expandedState]="panelOpenState">
-                <p *ngIf="panelOpenState" class="project-item-desc"> {{projectItem.desc}}
+                <p *ngIf="panelOpenState" class="project-item-desc"> {{'PROJECT.' + projectItem.title + '.DESC' | translate}}
             </div>
         </div>
     </ng-template>

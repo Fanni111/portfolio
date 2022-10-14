@@ -24,7 +24,7 @@ export class WorkPageComponent implements OnInit {
   constructor(deviceDetector: DeviceDetectorService) {
     this.motivapp = new ProjectItem(
       'assets/images/videography/neptanc.jpg',
-      'Motivapp',
+      'MOTIVAPP',
       'Motion design',
       'Egy mobilalkalmazás, mely kreatív jutalomrendszer alkalmazását teszi lehetővé a gyakorlatban. A MotivApp használatával intézményedben oktató tanárok korszerű tanulmányi környezetet teremthetnek a diákoknak. Az applikációt bemutató videó elkészítésével jártultam hozzá a Hiventures támogatásban részült project fejlesztéséhez.',
       [
@@ -39,7 +39,7 @@ export class WorkPageComponent implements OnInit {
     );
     this.kripto = new ProjectItem(
       'assets/images/webdesign/eskuvokorzo_mockup.png',
-      'Kriptovalutákról egyszerűen',
+      'CRYPTO',
       'Motion design',
       'Vajon te mennyit tudsz a kriptovaluták világáról? Edukációs céllal készült az MNB OKTATÁSI KLUB: THINK & EXPLAIN! videópályázatára a kriptovaluták témájában. Célja, hogy ez a manapság egyre többet használt pénzügyi fogalom könnyen fogyasztható formában, kreatív megköszelítéssel mindenki számára érthetővé válljon.',
       [
