@@ -23,5 +23,12 @@ Majd commitolni és pusholni
 Egyedi weblapos
 
 ng build --prod --baseHref="http://borbasfanni.hu"
+a .htaccess fájl hozzáadva azért, hogy www.borbasfanni.hu-t is ítirányítsa ugyanerre a buildelt változatra (azaz borbasfanni.hu-ra) mivel enélkül a www.-s kezdtű oldal nem tölt be
 
+Angol fordítás
+2 nyelvválasztó komponens:
+- switcher (desktop view): figyelni a scss ng deep override-ra
+- toggle:
+
+Ezeknél történik a nyelvválasztás amit ngx-translate csomaggal mukodik és egy hu.json és egy en.json fájlban vannak az adoatok melyet pipe-al a template html-ekbe injektáltam.  Trükkös megoldás van ahol konkrétan egyedi html komponensbe kellett berakni, ott trukk string concat:  <div class="work-item-title">{{'PROJECT.' + projectItem.title + '.TITLE' | translate}}</div>
 
