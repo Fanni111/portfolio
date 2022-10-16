@@ -1,6 +1,6 @@
 <mat-button-toggle-group class="toggle-group"  [value]="selectedLanguage" >
   <mat-button-toggle *ngFor="let item of langMenuitems" [value]="item" class="toggle-btn-item" (change)="onLanguageChange(item)">
     <img [src] = "item.icon" class="lang-icon"/>
-    <div>{{item.label}}</div></mat-button-toggle>
+    <div>{{'TOPNAV.' + item.title | translate}}</div></mat-button-toggle>
 
 </mat-button-toggle-group>

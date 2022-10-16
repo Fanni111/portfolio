@@ -18,12 +18,12 @@ export class LanguageToggleComponent implements OnInit {
   selectedLanguage: LangMenuItem;
   langMenuitems: LangMenuItem[] = [
     {
-      title: 'Hungarian',
+      title: 'Magyar',
       label: 'hu',
       icon: '../../../assets/images/icons/flag_hu.svg',
     },
     {
-      title: 'English',
+      title: 'Angol',
       label: 'en',
       icon: '../../../assets/images/icons/flag_en.svg',
     },

@@ -5,6 +5,6 @@
 <mat-menu #beforeMenu="matMenu" xPosition="before" class="langMenuPanel">
   <button *ngFor="let item of langMenuitems" mat-menu-item class="menuitem" (click)="onLanguageChange(item)">
     <img [src] = "item.icon" class="lang-icon"/>
-    <div>{{item.title}}</div>
+    <div>{{'TOPNAV.' + item.title| translate}}</div>
   </button>
 </mat-menu>

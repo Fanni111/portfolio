@@ -51,7 +51,7 @@ export class WorkPageComponent implements OnInit {
     );
     this.vizio = new ProjectItem(
       'assets/images/videography/neptanc.jpg',
-      'VÍZió',
+      'VIZIO',
       'Motion design',
       'A Watervision + 150 című pályázatra készítettem a VÍZió című animációs videót melyben Budapest jelenlegi vízhelyzetének bemutatása mellett a tudatos vízfelhasználás fontosságára szeretném felhívni a figyelmet.',
       [
@@ -63,7 +63,7 @@ export class WorkPageComponent implements OnInit {
     );
     this.munkavedelem = new ProjectItem(
       'assets/images/videography/neptanc.jpg',
-      'Figyelsz rá?',
+      'MUNKAVEDELEM',
       'Motion design',
       'A munkavédelem közös ügyünk. Akár munkáltatóként, akár munkavállalóként nap, mint nap felelősséget vállalunk. A videóban a figyelemfelkeltés mestere mutat rá a munkavédelem fontosságára.',
       [
@@ -76,7 +76,7 @@ export class WorkPageComponent implements OnInit {
 
     this.eskuvoKorzo = new ProjectItem(
       'assets/images/webdesign/eskuvokorzo_mockup.png',
-      'Velencei Esküvőkorzó',
+      'ESKUVOKORZO',
       'Webdesign',
       'A nagy napra készülő jegyespárok kiállítása ahol számos érdekes előadás, esküvői szolgáltatók és romantikus hangulat várja az érdeklődőket. Az esemény weboldalának, plakátjainak, szórólapjainak tervezése és kivitelezése mellett egy hangulatvideóval járultam hozzá a rendezvény sikeréhez.',
       [
@@ -88,7 +88,7 @@ export class WorkPageComponent implements OnInit {
     );
     this.keleszto = new ProjectItem(
       'assets/images/webdesign/keleszto_mockup.png',
-      'Kelesztő terasz',
+      'KELESZTO',
       'Webdesign',
       'Tavasszal a Kálvin tér közelében nyitotta meg teraszát a Kelesztő melynek kreatív arculatát a logótervezéstől, a kirakati táblákon át a honlap készítésig valósíthattam meg. Kellemes olaszos hangulatú kávézó/pizzéria, ízletes ételekkel és frissítő italokkal várja vendégeit melynek pompás kínálatába egy hangulatvideó elkészítésével biztosítottam betekintést.',
       [
@@ -101,7 +101,7 @@ export class WorkPageComponent implements OnInit {
 
     this.neptanc = new ProjectItem(
       'assets/images/videography/neptanc.jpg',
-      'Fehérvári néptáncfesztivál',
+      'NEPTANC',
       'Videography',
       'A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.',
       [
@@ -114,7 +114,7 @@ export class WorkPageComponent implements OnInit {
 
     this.lloyd = new ProjectItem(
       'assets/images/videography/lloyd.jpg',
-      'Lloyd veteránautó',
+      'LLOYD',
       'Videography',
       'Egy igazi veteránautó, mely visszarepít az időben. Egy népszerű német márkájú kisautó, mely az 50-es években hódított és habár az idő vasfoga megkoptatta de egy kis renoválást követően újra eredeti fényében pompázik. Édesapám szerelmprojektjét vettem lencsevégre. ',
       [
@@ -126,7 +126,7 @@ export class WorkPageComponent implements OnInit {
 
     this.enkicsibp = new ProjectItem(
       'assets/images/videography/neptanc.jpg',
-      'Az én kicsi Budapestem',
+      'BUDAPEST',
       'Videography',
       ',,HA LENNE EGY NAPOD EGY VILÁGÖRÖKSÉG VÁROSBAN” címmel hirdetett videópályázatot a Világörökség Városok Szervezete (OWHC Organisation of World Heritage Cities). Erre készítettem el a fővárosunkat megelevenítő kisfilmet ,,Az én kicsi Budapestem”-et. Egy gyerekszobából indulva ismerhetjük meg Budapest történetét, nevezetességeit melyek a szemünk láttára kelnek életre. A videóval a hazai fordulóból továbbjutottam a nemzetközi mezőny élvonalába.',
       [
