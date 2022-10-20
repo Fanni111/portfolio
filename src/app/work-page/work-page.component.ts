@@ -34,7 +34,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/projection mapping/Infinity_01_insta.png',
         'assets/images/projection mapping/Infinity_03_insta.png',
       ],
-      'https://www.youtube.com/embed/g6hJ4Z_0j64'
+      'https://www.youtube.com/embed/EHPFBkc82B0'
     );
     this.mapsion = new ProjectItem(
       'assets/images/videography/neptanc.jpg',
@@ -46,7 +46,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/projection mapping/mapsion_mapping_02.png',
         'assets/images/projection mapping/mapsion_mapping_03.png',
       ],
-      'https://www.youtube.com/embed/g6hJ4Z_0j64'
+      'https://www.youtube.com/embed/70FXHn7svb8'
     );
 
     this.motivapp = new ProjectItem(
