@@ -1,22 +1,7 @@
 <div class="work-container base-side-padding">
-    <div class="work-category-wrapper" [style.border-image-source]="videographyCategory?.color">
 
-        <a [routerLink]="'/munkaim'" fragment="neptanc-anchor" class="clickable-element">
-
-            <div class="work-category-icon-wrapper">
-                <!-- <img class="work-category-icon" src="assets/images/camera gif.gif" /> -->
-                <img class="work-category-icon" src="assets/images/icon_cam.png" />
-            </div>
-
-            <div class="work-category-title-wrapper">
-                <h3 class="work-category-title">{{videographyCategory?.title}}</h3>
-            </div>
-        </a>
-
-    </div>
 
     <div class="work-category-wrapper" [style.border-image-source]="motionDesignCategory?.color">
-
         <a [routerLink]="'/munkaim'" fragment="motivapp-anchor" class="clickable-element">
 
             <div class="work-category-icon-wrapper">
@@ -28,15 +13,26 @@
                 <h3 class="work-category-title">{{motionDesignCategory?.title}}</h3>
             </div>
         </a>
-
     </div>
+
+    <div class="work-category-wrapper" [style.border-image-source]="videographyCategory?.color">
+      <a [routerLink]="'/munkaim'" fragment="zsolnay-anchor" class="clickable-element">
+
+          <div class="work-category-icon-wrapper">
+              <img class="work-category-icon" src="assets/images/icon_projector.png" />
+          </div>
+
+          <div class="work-category-title-wrapper">
+              <h3 class="work-category-title">{{projectionMappingCategory?.title}}</h3>
+          </div>
+      </a>
+  </div>
 
     <div class="work-category-wrapper" [style.border-image-source]="webDesignCategory?.color">
         <!-- <img class="work-category-icon" src="assets/images/motion_design_arrow.png" /> -->
-
         <a [routerLink]="'/munkaim'" fragment="eskuvokorzo-anchor" class="clickable-element">
             <div class="work-category-icon-wrapper">
-                <img class="work-category-icon" src="assets/images/laptop_icon.png" />
+                <img class="work-category-icon" src="assets/images/icon_webdesign.png" />
             </div>
 
             <div class="work-category-title-wrapper">
@@ -44,4 +40,19 @@
             </div>
         </a>
     </div>
+
+    <div class="work-category-wrapper" [style.border-image-source]="videographyCategory?.color">
+      <a [routerLink]="'/munkaim'" fragment="neptanc-anchor" class="clickable-element">
+
+          <div class="work-category-icon-wrapper">
+              <!-- <img class="work-category-icon" src="assets/images/camera gif.gif" /> -->
+              <img class="work-category-icon" src="assets/images/icon_cam.png" />
+          </div>
+
+          <div class="work-category-title-wrapper">
+              <h3 class="work-category-title">{{videographyCategory?.title}}</h3>
+          </div>
+      </a>
+  </div>
+
 </div>

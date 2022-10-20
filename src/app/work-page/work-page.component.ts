@@ -9,6 +9,8 @@ import { DeviceDetectorService } from '../services/deviceDetectorService';
 })
 export class WorkPageComponent implements OnInit {
   panelOpenState = false;
+  zsolnay: ProjectItem;
+  mapsion: ProjectItem;
   motivapp: ProjectItem;
   kripto: ProjectItem;
   vizio: ProjectItem;
@@ -22,6 +24,31 @@ export class WorkPageComponent implements OnInit {
   isMobileDevice: boolean;
 
   constructor(deviceDetector: DeviceDetectorService) {
+    this.zsolnay = new ProjectItem(
+      'assets/images/videography/neptanc.jpg',
+      'ZSOLNAY',
+      'Projection mapping',
+      'Egy mobilalkalmazás, mely kreatív jutalomrendszer alkalmazását teszi lehetővé a gyakorlatban. A MotivApp használatával intézményedben oktató tanárok korszerű tanulmányi környezetet teremthetnek a diákoknak. Az applikációt bemutató videó elkészítésével jártultam hozzá a Hiventures támogatásban részült project fejlesztéséhez.',
+      [
+        'assets/images/projection mapping/Infinity_02_insta.png',
+        'assets/images/projection mapping/Infinity_01_insta.png',
+        'assets/images/projection mapping/Infinity_03_insta.png',
+      ],
+      'https://www.youtube.com/embed/g6hJ4Z_0j64'
+    );
+    this.mapsion = new ProjectItem(
+      'assets/images/videography/neptanc.jpg',
+      'MAPSION',
+      'Projection mapping',
+      'Egy mobilalkalmazás, mely kreatív jutalomrendszer alkalmazását teszi lehetővé a gyakorlatban. A MotivApp használatával intézményedben oktató tanárok korszerű tanulmányi környezetet teremthetnek a diákoknak. Az applikációt bemutató videó elkészítésével jártultam hozzá a Hiventures támogatásban részült project fejlesztéséhez.',
+      [
+        'assets/images/projection mapping/mapsion_mapping_01.png',
+        'assets/images/projection mapping/mapsion_mapping_02.png',
+        'assets/images/projection mapping/mapsion_mapping_03.png',
+      ],
+      'https://www.youtube.com/embed/g6hJ4Z_0j64'
+    );
+
     this.motivapp = new ProjectItem(
       'assets/images/videography/neptanc.jpg',
       'MOTIVAPP',

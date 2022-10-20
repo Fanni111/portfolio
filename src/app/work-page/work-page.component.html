@@ -8,6 +8,15 @@
     <div class="project-list">
         <div class="base-side-padding projects-desc" [innerHtml]="'MUNKAIM.TOP-DESC' | translate">
         </div>
+
+        <div class="my-work-section base-side-padding work-category-header" id="zsolnay-anchor">
+          <h2>Projection mapping</h2>
+      </div>
+
+      <expandable-project-item [projectItem]="zsolnay" [isLeftAligned]="true" [topPadding]="5" [isMobileDevice]="isMobileDevice"></expandable-project-item>
+        <expandable-project-item [projectItem]="mapsion" [isLeftAligned]="false" [topPadding]="5"  [isMobileDevice]="isMobileDevice"></expandable-project-item>
+
+
         <div class="my-work-section base-side-padding work-category-header" id="motivapp-anchor">
             <h2>Motion design</h2>
         </div>
