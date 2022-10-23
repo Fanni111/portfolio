@@ -1,5 +1,5 @@
-<a [routerLink]="'/munkaim'" [fragment]="categoryItem.anchorLink">
+<a [routerLink]="'/munkaim'" [fragment]="categoryItem.anchorLink" [id]="'btn-'+ categoryItem.title">
     <button class="floating-btn tooltip expand" [style.border-image-source]=categoryItem.color [attr.data-title]=categoryItem.title>
-    <img class="btn-img" [src]=categoryItem.icon />
+    <img class="floating-btn-img" [src]=categoryItem.icon />
 </button>
 </a>

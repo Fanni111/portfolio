@@ -26,7 +26,7 @@
     </ng-template>
 
 
-    <div class="project-item-container" [class.left-aligned-content]="isLeftAligned || isMobileDevice">
+    <div class="project-item-container" [class.left-aligned-content]="isLeftAligned || isMobileDevice" [id]="projectItem.title">
 
         <ng-container *ngIf="isLeftAligned || isMobileDevice; else rightAligned">
 

@@ -6,8 +6,8 @@
     </span>
     <!-- Desktop menu -->
     <span class="top-menu-wrapper">
-    <a *ngFor="let item of menuItems" [routerLink]="item.link" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" #rla="routerLinkActive" [fragment]="item?.fragment">
-        <button mat-button fxHide.lt-md [ngClass]="rla.isActive ? 'selectedMenuItem' : ''">
+    <a [id]="item.label" *ngFor="let item of menuItems" [routerLink]="item.link" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" #rla="routerLinkActive" [fragment]="item?.fragment">
+        <button mat-button fxHide.lt-md [ngClass]="rla.isActive ? 'selectedMenuItem' : ''" (click)="onMenuItemClick()">
         {{'TOPNAV.' + item.label | translate}}
     </button>
     </a>
@@ -21,8 +21,8 @@
     <mat-menu #dropMenu="matMenu" backdropClass="dropdownMenu">
       <language-toggle fxHide fxShow.lt-md></language-toggle>
         <ng-container *ngFor="let item of menuItems">
-            <a [routerLink]="item.link" [fragment]="item?.fragment">
-                <button mat-menu-item>
+            <a [id]="item.label" [routerLink]="item.link" [fragment]="item?.fragment">
+                <button mat-menu-item (click)="onMenuItemClick()">
         {{'TOPNAV.' + item.label | translate}}
             </button>
             </a>

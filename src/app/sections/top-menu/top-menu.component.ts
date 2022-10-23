@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Observable } from 'rxjs';
+import {
+  LangMenuItem,
+  LanguageSwitcherService,
+} from 'src/app/services/languageSwitcherService';
 
 export interface MenuItem {
   label: string;
@@ -16,7 +19,7 @@ export interface MenuItem {
 
 /*
 https://www.youtube.com/watch?v=iWYP3NtKQjs */
-export class TopMenuComponent implements OnInit {
+export class TopMenuComponent {
   menuItems: MenuItem[] = [
     {
       label: 'Magamról',
@@ -32,13 +35,16 @@ export class TopMenuComponent implements OnInit {
       fragment: 'contact-anchor'
     }*/,
   ];
-  selectedLanguage: string;
+  selectedLanguage: LangMenuItem;
 
-  constructor(private translateService: TranslateService) {
-    this.translateService.setDefaultLang('hu');
+  constructor(
+    private translateService: TranslateService,
+    public languageSwitcherService: LanguageSwitcherService
+  ) {}
+
+  public onMenuItemClick() {
+    this.selectedLanguage = this.languageSwitcherService.getSelectedLanguage();
+    this.languageSwitcherService.storeSelectedLanguage(this.selectedLanguage);
+    this.translateService.use(this.selectedLanguage.label);
   }
-
-  ngOnInit(): void {}
-
-  public onToggleSidenav = () => {};
 }

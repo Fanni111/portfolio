@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
-export interface LangMenuItem {
-  title: string;
-  label: string;
-  icon: string;
-}
+import {
+  LangMenuItem,
+  langMenuitems,
+  LanguageSwitcherService,
+} from 'src/app/services/languageSwitcherService';
 
 @Component({
   selector: 'language-switcher',
@@ -14,25 +13,19 @@ export interface LangMenuItem {
 })
 export class LanguageSwitcherComponent {
   selectedLanguage: LangMenuItem;
-  langMenuitems: LangMenuItem[] = [
-    {
-      title: 'Magyar',
-      label: 'hu',
-      icon: '../../../assets/images/icons/flag_hu.svg',
-    },
-    {
-      title: 'Angol',
-      label: 'en',
-      icon: '../../../assets/images/icons/flag_en.svg',
-    },
-  ];
+  langMenuitems = langMenuitems;
 
-  constructor(private translateService: TranslateService) {
-    this.selectedLanguage = this.langMenuitems[0];
+  constructor(
+    private translateService: TranslateService,
+    public languageSwitcherService: LanguageSwitcherService
+  ) {
+    this.selectedLanguage = this.languageSwitcherService.getSelectedLanguage();
+    this.translateService.use(this.selectedLanguage.label);
   }
 
   public onLanguageChange(selectedLanguage: LangMenuItem) {
     this.selectedLanguage = selectedLanguage;
     this.translateService.use(this.selectedLanguage.label);
+    this.languageSwitcherService.storeSelectedLanguage(this.selectedLanguage);
   }
 }

@@ -34,7 +34,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/projection mapping/Infinity_01_insta.png',
         'assets/images/projection mapping/Infinity_03_insta.png',
       ],
-      'https://www.youtube.com/embed/EHPFBkc82B0'
+      'https://www.youtube.com/embed/EHPFBkc82B0?enablejsapi=1'
     );
     this.mapsion = new ProjectItem(
       'assets/images/videography/neptanc.jpg',
@@ -46,7 +46,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/projection mapping/mapsion_mapping_02.png',
         'assets/images/projection mapping/mapsion_mapping_03.png',
       ],
-      'https://www.youtube.com/embed/70FXHn7svb8'
+      'https://www.youtube.com/embed/70FXHn7svb8?enablejsapi=1'
     );
 
     this.motivapp = new ProjectItem(
@@ -62,7 +62,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/motiondesign/motivapp_img_04.png',
         'assets/images/motiondesign/motivapp_img_05.png',
       ],
-      'https://www.youtube.com/embed/g6hJ4Z_0j64'
+      'https://www.youtube.com/embed/g6hJ4Z_0j64?enablejsapi=1'
     );
     this.kripto = new ProjectItem(
       'assets/images/webdesign/eskuvokorzo_mockup.png',
@@ -74,7 +74,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/motiondesign/src_kripto_01.png',
         'assets/images/motiondesign/src_kripto_02.png',
       ],
-      'https://youtube.com/embed/_ljc4qoL5E8'
+      'https://youtube.com/embed/_ljc4qoL5E8?enablejsapi=1'
     );
     this.vizio = new ProjectItem(
       'assets/images/videography/neptanc.jpg',
@@ -86,7 +86,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/motiondesign/vizio_img_02.png',
         'assets/images/motiondesign/vizio_img_03.png',
       ],
-      'https://www.youtube.com/embed/0LlYQ1deEZY'
+      'https://www.youtube.com/embed/0LlYQ1deEZY?enablejsapi=1'
     );
     this.munkavedelem = new ProjectItem(
       'assets/images/videography/neptanc.jpg',
@@ -98,7 +98,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/motiondesign/munkavedelem_img_02.png',
         'assets/images/motiondesign/munkavedelem_img_03.png',
       ],
-      'https://www.youtube.com/embed/uM3WDlBJJF4'
+      'https://www.youtube.com/embed/uM3WDlBJJF4?enablejsapi=1'
     );
 
     this.eskuvoKorzo = new ProjectItem(
@@ -111,7 +111,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/webdesign/eskuvokorzo_nagy_plakat.png',
         'assets/images/webdesign/scr_eskuvokorzo.jpg',
       ],
-      'https://www.youtube.com/embed/g8inxKDBxkg'
+      'https://www.youtube.com/embed/g8inxKDBxkg?enablejsapi=1'
     );
     this.keleszto = new ProjectItem(
       'assets/images/webdesign/keleszto_mockup.png',
@@ -123,7 +123,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/webdesign/etlap_asztalon.png',
         'assets/images/webdesign/keleszto_oszlop.png',
       ],
-      'https://youtube.com/embed/IxsdwYRmtDw'
+      'https://youtube.com/embed/IxsdwYRmtDw?enablejsapi=1'
     );
 
     this.neptanc = new ProjectItem(
@@ -136,7 +136,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/videography/neptanc2.jpg',
         'assets/images/videography/neptanc3.png',
       ],
-      'https://youtube.com/embed/MqIr-0kLktw'
+      'https://youtube.com/embed/MqIr-0kLktw?enablejsapi=1'
     );
 
     this.lloyd = new ProjectItem(
@@ -148,7 +148,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/videography/lloyd.jpg',
         'assets/images/videography/lloyd_back.jpg',
       ],
-      'https://youtube.com/embed/Enk6LjPkvDM'
+      'https://youtube.com/embed/Enk6LjPkvDM?enablejsapi=1'
     );
 
     this.enkicsibp = new ProjectItem(
@@ -162,7 +162,7 @@ export class WorkPageComponent implements OnInit {
         'assets/images/videography/budapest_03.png',
         'assets/images/videography/budapest_04.png',
       ],
-      'https://www.youtube.com/embed/KahvokmjkOo'
+      'https://www.youtube.com/embed/KahvokmjkOo?enablejsapi=1'
     );
 
     this.isMobileDevice = deviceDetector.isMobileDevice();
