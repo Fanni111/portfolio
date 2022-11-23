@@ -96,16 +96,54 @@
   }
 }
 
+.video-mockup-wrapper {
+  width: 40vw;
+  height: 30vw;
+  position: relative;
+  @media screen and (max-width: $screenSizeMedium) {
+    width: 80vw;
+    height: 50vw;
+  }
+}
+
+.video-mockup-wrapper:after {
+  content: "";
+  display: block;
+  background: url(../../assets/images/notebook_mockup.png) no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  z-index: 10;
+}
+.yt-video {
+  height: 66%;
+  position: absolute;
+  z-index: 500;
+  width: 75%;
+  left: 5vw;
+  top: 1vw;
+  pointer-events: all;
+  @media screen and (max-width: $screenSizeMedium) {
+    height: 79%;
+    width: 75%;
+    left: 10vw;
+    top: 2vw;
+  }
+}
+
 .profile-circle-container {
   position: relative;
   display: flex;
-  margin: 10% 0;
+  //margin: 8% 0;
 }
 
 .about-text-container {
   display: flex;
   flex-direction: column;
-  padding-right: 8vw;
+  padding-right: 6vw;
   @media screen and (max-width: $screenSizeMedium) {
     align-items: center;
     text-align: center;
@@ -113,13 +151,11 @@
 }
 
 h1 {
-  // font-size: 5.5vw;
   margin-bottom: 0;
   font-weight: 100;
 }
 
 h2 {
-  // font-size: 2.5vw;
   margin: 2vh 0;
 }
 
@@ -138,15 +174,6 @@ h2 {
   color: white;
 }
 
-.ellipse-img-30 {
-  //max-width: 30vw;
-}
-
-.ellipse-green-blue {
-  pointer-events: none;
-  content: url(../../assets/images/Ellipse_green_blue.png);
-}
-
 .ellipse-green-blue-outer {
   position: relative;
   display: flex;
@@ -157,25 +184,11 @@ h2 {
   z-index: 82;
 }
 
-.ellipse-pink-blue {
-  content: url(../../assets/images/Ellipse_pink_blue.png);
-}
-
-.ellipse-pink-blue-outer {
-  position: absolute;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  margin-left: 1.6vw;
-  z-index: 83;
-  display: flex;
-}
-
 .fanni-profile {
   position: relative;
   pointer-events: none;
-  content: url(../../assets/images/profile_fanni.png);
-  max-width: 35vw;
+  content: url(../../assets/images/notebook_mockup.png);
+  max-width: 42vw;
   @media screen and (max-width: $screenSizeMedium) {
     max-width: 75vw;
   }
@@ -186,16 +199,17 @@ h2 {
   display: flex;
   width: 100%;
   height: 100%;
-  margin-top: 2vw;
+  margin-top: 10vw;
   pointer-events: none;
   z-index: 82;
+  @media screen and (max-width: $screenSizeMedium) {
+    margin-top: 0;
+  }
 }
 
 .skills-section {
   display: flex;
-  // max-height: 40vh;
   align-items: center;
-  // max-width: 100%;
   @media screen and (max-width: $screenSizeMedium) {
     flex-direction: column-reverse;
     text-align: center;
@@ -203,7 +217,6 @@ h2 {
   .skills-cloud-container {
     display: flex;
     width: 25%;
-    // height: 100%;
     @media screen and (max-width: $screenSizeMedium) {
       width: 50vw;
       height: 50vw;
@@ -232,7 +245,6 @@ h2 {
 
 .icon-asset {
   display: flex;
-  // max-height: 5vh;
   width: 65%;
   height: auto;
   margin-bottom: 5%;
