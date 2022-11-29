@@ -18,6 +18,7 @@ export class WorkPageComponent implements OnInit {
   enkicsibp: ProjectItem;
   lloyd: ProjectItem;
   neptanc: ProjectItem;
+  aldi: ProjectItem;
   eskuvoKorzo: ProjectItem;
   keleszto: ProjectItem;
 
@@ -124,6 +125,15 @@ export class WorkPageComponent implements OnInit {
         'assets/images/webdesign/keleszto_oszlop.png',
       ],
       'https://youtube.com/embed/IxsdwYRmtDw?enablejsapi=1'
+    );
+
+    this.aldi = new ProjectItem(
+      'assets/images/videography/szovetseg_infjusagert.jpg',
+      'ALDI',
+      'Videography',
+      'A székesfehérvári királyi napok alatt nemzetközi táncosok hangulatos felvonulással, táncokkal és látványos gálával szórakoztatták a közönséget. A legszebb pillanatokról hangulatvideót készítettem.',
+      ['assets/images/videography/szovetseg_infjusagert.jpg'],
+      'https://youtube.com/embed/_ODlPQu0REM?enablejsapi=1'
     );
 
     this.neptanc = new ProjectItem(
