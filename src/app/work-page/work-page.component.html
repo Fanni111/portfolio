@@ -6,8 +6,14 @@
 
   <floating-menu fxHide.xs></floating-menu>
   <div class="project-list">
-    <div class="base-side-padding projects-desc" [innerHtml]="'MUNKAIM.TOP-DESC' | translate">
+    <div class="base-side-padding projects-desc-top" [innerHtml]="'MUNKAIM.TOP-DESC' | translate">
     </div>
+    <div class="base-side-padding projects-desc-bottom">
+
+      <div [innerHtml]="'MUNKAIM.BEHANCE-TEXT' | translate"></div>
+      <a href="https://www.behance.net/fanniborbs" target="_blank"><img src="../../assets/images/behance logo.png"></a>
+    </div>
+
 
     <div class="my-work-section base-side-padding work-category-header" id="zsolnay-anchor">
       <h2>Projection mapping</h2>

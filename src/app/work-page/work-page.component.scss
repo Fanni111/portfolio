@@ -31,8 +31,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  .projects-desc {
-    padding: 4% 10vw 4% 10vw;
+  .projects-desc-top {
+    padding: 4% 10vw 0% 10vw;
     font-size: 1.4vw;
     text-align: center;
 
@@ -40,6 +40,27 @@
       font-size: 1rem;
     }
   }
+
+  .projects-desc-bottom {
+    padding: 2% 10vw 4% 10vw;
+    font-size: 1.4vw;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    img {
+      max-height: 4vh;
+      padding-left: 12px;
+    }
+
+    @media screen and (max-width: $screenSizeMedium) {
+      font-size: 1rem;
+    }
+  }
+
   .work-category-header {
     // padding-top: 3vw;
     // padding-left: 10vw;
