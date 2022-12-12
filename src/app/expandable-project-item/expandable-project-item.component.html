@@ -1,44 +1,48 @@
 <div class="project-list">
 
-    <ng-template #expandableImgComp>
-        <div class="project-img-exp-panel gradient-border" [class.expanded-size]="panelOpenState">
-            <div class="project-header-img-wrapper">
-                <!-- <img class="img-front" [src]=projectItem.imgSrc /> -->
-                <image-slider [isExpanded]="panelOpenState" [images]="projectItem.images" [videoSrc]="projectItem.videoSrc"></image-slider>
-            </div>
-        </div>
-    </ng-template>
-
-    <ng-template #expandableDescComp>
-
-        <div class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState" [class.right-aligned]="!isLeftAligned">
-            <div class="gradiental-border" (click)="changePanelState()">
-                <div class="project-main-title-wrapper project-title" [class.expanded-content]="panelOpenState">
-                    <div class="work-item-category">{{projectItem?.category}}</div>
-                    <div class="work-item-title">{{'PROJECT.' + projectItem.title + '.TITLE' | translate}}</div>
-                </div>
-            </div>
-
-            <div class="expanded-content" [class.expandedState]="panelOpenState">
-                <p *ngIf="panelOpenState" class="project-item-desc"> {{'PROJECT.' + projectItem.title + '.DESC' | translate}}
-            </div>
-        </div>
-    </ng-template>
-
-
-    <div class="project-item-container" [class.left-aligned-content]="isLeftAligned || isMobileDevice" [id]="projectItem.title">
-
-        <ng-container *ngIf="isLeftAligned || isMobileDevice; else rightAligned">
-
-            <ng-container *ngTemplateOutlet="expandableImgComp"></ng-container>
-            <ng-container *ngTemplateOutlet="expandableDescComp"></ng-container>
-
-        </ng-container>
-
-        <ng-template #rightAligned>
-
-            <ng-container *ngTemplateOutlet="expandableDescComp"></ng-container>
-            <ng-container *ngTemplateOutlet="expandableImgComp"></ng-container>
-        </ng-template>
-
+  <ng-template #expandableImgComp>
+    <div class="project-img-exp-panel gradient-border" [class.expanded-size]="panelOpenState">
+      <div class="project-header-img-wrapper">
+        <!-- <img class="img-front" [src]=projectItem.imgSrc /> -->
+        <image-slider [isExpanded]="panelOpenState" [images]="projectItem.images" [videoSrc]="projectItem.videoSrc">
+        </image-slider>
+      </div>
     </div>
+  </ng-template>
+
+  <ng-template #expandableDescComp>
+
+    <div class="project-desc-exp-panel" [class.fixed-expanded-size]="panelOpenState"
+      [class.right-aligned]="!isLeftAligned">
+      <div class="gradiental-border" (click)="changePanelState()">
+        <div class="project-main-title-wrapper project-title" [class.expanded-content]="panelOpenState">
+          <div class="work-item-category">{{projectItem?.category}}</div>
+          <div class="work-item-title">{{'PROJECT.' + projectItem.title + '.TITLE' | translate}}</div>
+        </div>
+      </div>
+
+      <div class="expanded-content" [class.expandedState]="panelOpenState">
+        <p *ngIf="panelOpenState" class="project-item-desc"> {{'PROJECT.' + projectItem.title + '.DESC' | translate}}
+        </p>
+      </div>
+    </div>
+  </ng-template>
+
+
+  <div class="project-item-container" [class.left-aligned-content]="isLeftAligned || isMobileDevice"
+    [id]="projectItem.title">
+
+    <ng-container *ngIf="isLeftAligned || isMobileDevice; else rightAligned">
+
+      <ng-container *ngTemplateOutlet="expandableImgComp"></ng-container>
+      <ng-container *ngTemplateOutlet="expandableDescComp"></ng-container>
+
+    </ng-container>
+
+    <ng-template #rightAligned>
+
+      <ng-container *ngTemplateOutlet="expandableDescComp"></ng-container>
+      <ng-container *ngTemplateOutlet="expandableImgComp"></ng-container>
+    </ng-template>
+
+  </div>
