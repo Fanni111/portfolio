@@ -29,6 +29,7 @@ import { LanguageSwitcherComponent } from './sections/top-menu/language-switcher
 import { LanguageToggleComponent } from './sections/top-menu/language-toggle.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FormsModule } from '@angular/forms';
+import { CvPageComponent } from './cv-page/cv-page.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -42,6 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     TopMenuComponent,
     FooterComponent,
     WorkPageComponent,
+    CvPageComponent,
     ExpandableProjectItemComponent,
     WorkCategoryOverviewComponent,
     FloatingMenuComponent,

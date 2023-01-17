@@ -2,6 +2,7 @@
   "TOPNAV": {
     "Magamról": "Magamról",
     "Munkáim": "Munkáim",
+    "CV": "CV",
     "Magyar": "Magyar",
     "Angol": "Angol"
   },
@@ -11,6 +12,11 @@
 "SKILLS-TEXT": "Programozóként webfejlesztéssel foglalkozom, melyhez elengedhetetlennek tartom a felhasználó központú felületek tervezését és reszponzív megoldások kialakítását. Nagy hangsúlyt fektetek a funkcionalitás mellett a design tervezésére is, melyhez a statikus grafikai elemek mellett animációkat is készítek. Motion design videókon, animációkon keresztül azonnal egy erősebb, mélyebb kapcsolatot teremtve a célközönséggel, hamar kialakul egy bizalmi kapcsolat. Hiszek a történetmesélés erejében, mely képest hatást kelteni, összekötni és korlátokat ledönteni az emberekben.",
 "KAPCSOLAT": "Kapcsolat",
 "KAPCSOLAT-TEXT": "<p>Ha tetszik a munkám és egy kreatív, rugalmas és ötletekkel teli alkotótársra van szükséged, dolgozzunk együtt!<br>Vedd fel velem a kapcsolatot a <a class='email-link' href='mailto: fanni.borbas11@gmail.com'>fanni.borbas11@gmail.com</a> e-mail-címen!</p>"
+},
+
+"CV": {
+  "TOP-DESC": "Önéletrajz",
+  "IMG-SRC": "assets/images/Fanni Borbas CV 2022 magyar.png"
 },
 
 "MUNKAIM": {

@@ -2,6 +2,7 @@
   "TOPNAV": {
     "Magamról": "About",
     "Munkáim": "Works",
+    "CV": "CV",
     "Magyar": "Hungarian",
     "Angol": "English"
   },
@@ -12,6 +13,11 @@
 "SKILLS-TEXT": "I consider the design of user-centred interfaces and responsive solutions to be essential. I put a strong emphasis on functionality and design, for which I create animations in addition to static graphic elements. Motion design videos, through animations, instantly create a stronger, deeper connection with the target audience, quickly establishing a trusting relationship. I believe in the power of storytelling to impact, connect people and break down barriers.",
 "KAPCSOLAT": "Contact",
 "KAPCSOLAT-TEXT": "<p>If you like my work and you need a creative, flexible and creative partner full of ideas, let's work together!<br>Contact me at <a class='email-link' href='mailto: fanni.borbas11@gmail.com'>fanni.borbas11@gmail.com</a>!</p>"
+},
+
+"CV": {
+  "TOP-DESC": "Curriculum vitae",
+  "IMG-SRC": "assets/images/Fanni Borbas CV 2022.png"
 },
 
 "MUNKAIM": {

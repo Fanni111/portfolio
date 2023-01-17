@@ -26,6 +26,10 @@ export class TopMenuComponent {
       link: '',
     },
     {
+      label: 'CV',
+      link: 'cv',
+    },
+    {
       label: 'Munkáim',
       link: 'munkaim',
     } /*,
